@@ -18,67 +18,33 @@ import * as cheerio from "cheerio";
 import { readFile, writeFile } from "node:fs/promises";
 import { fileURLToPath } from "node:url";
 import { dirname, join } from "node:path";
-import { Agent, request as undiciRequest, interceptors } from "undici";
-import tls from "node:tls";
 
 const __dirname = dirname(fileURLToPath(import.meta.url));
 const ROOT = join(__dirname, "..");
 const FEEDS_CONFIG_PATH = join(ROOT, "feeds.json");
 
-const CONCURRENCY = 10;
+const CONCURRENCY = 5;
 
 // --- Shared utilities ---
 
-// Reorder TLS ciphers to produce a non-default JA3 fingerprint.
-// Cloudflare fingerprints the TLS handshake — Node.js's default cipher order
-// is a known bot signature. Swapping the first TLS 1.3 ciphers changes the
-// JA3 hash while remaining fully secure.
-const defaultCiphers = tls.DEFAULT_CIPHERS.split(":");
-const ciphers = [
-  defaultCiphers[0],
-  defaultCiphers[2],
-  defaultCiphers[1],
-  ...defaultCiphers.slice(3),
-].join(":");
-
-const tlsAgent = new Agent({
-  connect: { ciphers },
-}).compose(interceptors.redirect({ maxRedirections: 5 }));
-
-// Chrome-like headers — must look consistent with a real browser
 const FETCH_HEADERS = {
   "User-Agent":
-    "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/131.0.0.0 Safari/537.36",
-  Accept: "text/html,application/xhtml+xml,application/xml;q=0.9,image/avif,image/webp,image/apng,*/*;q=0.8",
-  "Accept-Language": "en-US,en;q=0.9",
-  "Accept-Encoding": "gzip, deflate, br, zstd",
-  "Cache-Control": "max-age=0",
-  "Sec-Ch-Ua": '"Google Chrome";v="131", "Chromium";v="131", "Not_A Brand";v="24"',
-  "Sec-Ch-Ua-Mobile": "?0",
-  "Sec-Ch-Ua-Platform": '"macOS"',
-  "Sec-Fetch-Dest": "document",
-  "Sec-Fetch-Mode": "navigate",
-  "Sec-Fetch-Site": "none",
-  "Sec-Fetch-User": "?1",
-  "Upgrade-Insecure-Requests": "1",
+    "Mozilla/5.0 (compatible; RSS-Feed-Crawler/1.0; +https://github.com/znck/feeds)",
+  Accept: "text/html,application/xhtml+xml,application/xml;q=0.9,*/*;q=0.8",
+  "Accept-Language": "en-US,en;q=0.5",
 };
 
 async function fetchWithRetry(url, retries = 3) {
   for (let i = 0; i <= retries; i++) {
     try {
-      const { statusCode, body } = await undiciRequest(url, {
-        method: "GET",
-        headers: FETCH_HEADERS,
-        dispatcher: tlsAgent,
-      });
-      const text = await body.text();
-      if (statusCode === 403 || statusCode === 429) {
-        const err = new Error(`HTTP ${statusCode} for ${url}`);
-        err.status = statusCode;
+      const res = await fetch(url, { headers: FETCH_HEADERS, redirect: "follow" });
+      if (res.status === 403 || res.status === 429) {
+        const err = new Error(`HTTP ${res.status} for ${url}`);
+        err.status = res.status;
         throw err;
       }
-      if (statusCode >= 400) throw new Error(`HTTP ${statusCode} for ${url}`);
-      return text;
+      if (!res.ok) throw new Error(`HTTP ${res.status} for ${url}`);
+      return await res.text();
     } catch (err) {
       if (i === retries) throw err;
       const delay = Math.pow(2, i + 1) * 1000;
@@ -96,8 +62,6 @@ async function runInParallel(items, fn, concurrency = CONCURRENCY) {
   async function worker(id) {
     while (index < items.length) {
       if (id >= limit) return;
-      // Random jitter (200-800ms) to avoid bot-like timing patterns
-      await new Promise((r) => setTimeout(r, 200 + Math.random() * 600));
       const i = index++;
       results[i] = await fn(items[i], {
         throttle() {
@@ -364,8 +328,15 @@ async function main() {
     process.exit(1);
   }
 
-  await Promise.all(selected.map((config) => crawlFeed(config)));
-  await tlsAgent.close();
+  const results = await Promise.allSettled(
+    selected.map((config) => crawlFeed(config))
+  );
+
+  const failed = results.filter((r) => r.status === "rejected");
+  if (failed.length) {
+    for (const f of failed) console.error("Feed failed:", f.reason.message);
+    if (failed.length === results.length) process.exit(1);
+  }
 }
 
 main().catch((err) => {
