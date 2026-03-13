@@ -47,13 +47,7 @@
     "title": "Detecting And Reducing Scheming In Ai Models",
     "discoveredAt": "2026-03-13T02:28:53.796Z"
   },
-  {
-    "slug": "news",
-    "url": "https://openai.com/news/",
-    "title": "News",
-    "discoveredAt": "2026-03-13T02:28:53.796Z"
-  },
-  {
+{
     "slug": "introducing-the-model-spec",
     "url": "https://openai.com/index/introducing-the-model-spec/",
     "title": "Introducing The Model Spec",

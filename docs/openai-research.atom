@@ -2,7 +2,7 @@
 <feed xmlns="http://www.w3.org/2005/Atom">
     <id>https://znck.github.io/feeds/openai-research.xml</id>
     <title>OpenAI Research</title>
-    <updated>2026-03-13T02:28:53.968Z</updated>
+    <updated>2026-03-13T02:40:57.481Z</updated>
     <generator>https://github.com/jpmonette/feed</generator>
     <author>
         <name>OpenAI Research</name>
@@ -56,12 +56,6 @@
         <title type="html"><![CDATA[Detecting And Reducing Scheming In Ai Models]]></title>
         <id>https://openai.com/index/detecting-and-reducing-scheming-in-ai-models/</id>
         <link href="https://openai.com/index/detecting-and-reducing-scheming-in-ai-models/"/>
-        <updated>2026-03-13T02:28:53.796Z</updated>
-    </entry>
-    <entry>
-        <title type="html"><![CDATA[News]]></title>
-        <id>https://openai.com/news/</id>
-        <link href="https://openai.com/news/"/>
         <updated>2026-03-13T02:28:53.796Z</updated>
     </entry>
     <entry>
