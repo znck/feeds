@@ -125,13 +125,17 @@ function discoverFromHtml(html, config) {
   return articles;
 }
 
-function discoverFromSitemap(xml) {
+function discoverFromSitemap(xml, config) {
   const $ = cheerio.load(xml, { xmlMode: true });
   const articles = [];
+  const pattern = config.discovery.linkPattern
+    ? new RegExp(config.discovery.linkPattern)
+    : null;
 
   $("url").each((_, el) => {
     const loc = $(el).find("loc").text().trim();
     if (!loc) return;
+    if (pattern && !pattern.test(loc)) return;
 
     const slug = slugFromUrl(loc);
     if (!slug) return;
@@ -255,7 +259,7 @@ async function crawlFeed(config) {
   const content = await fetchWithRetry(url);
 
   if (method === "sitemap") {
-    discovered = discoverFromSitemap(content);
+    discovered = discoverFromSitemap(content, config);
   } else {
     discovered = discoverFromHtml(content, config);
   }

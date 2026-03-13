@@ -27,7 +27,8 @@
     },
     "discovery": {
       "method": "sitemap",
-      "url": "https://openai.com/sitemap.xml/research/"
+      "url": "https://openai.com/sitemap.xml/research/",
+      "linkPattern": "/index/[^?#]+"
     }
   }
 ]
