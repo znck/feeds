@@ -16,6 +16,12 @@ Unofficial RSS feeds for engineering blogs that don't offer their own. Updated a
 4. RSS 2.0, Atom, and JSON Feed files are generated into `docs/`
 5. GitHub Actions commits any changes and GitHub Pages serves the feeds
 
+## Read with Foveate
+
+Looking for an RSS reader? [Foveate](https://znck.dev/apps/foveate/) is an iOS app with AI-powered summaries and a built-in speed reader. No ads, no tracking, no subscriptions.
+
+[![Download on the App Store](https://developer.apple.com/assets/elements/badges/download-on-the-app-store.svg)](https://apps.apple.com/us/app/foveate/id6759173368)
+
 ## Local development
 
 ```bash
