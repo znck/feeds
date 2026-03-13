@@ -24,7 +24,6 @@ const ROOT = join(__dirname, "..");
 const FEEDS_CONFIG_PATH = join(ROOT, "feeds.json");
 
 const CONCURRENCY = 10;
-const REQUEST_DELAY_MS = 1000; // polite delay between requests
 
 // --- Shared utilities ---
 
@@ -37,18 +36,8 @@ const FETCH_HEADERS = {
   Connection: "keep-alive",
 };
 
-let lastRequestTime = 0;
-
 async function fetchWithRetry(url, retries = 3) {
   for (let i = 0; i <= retries; i++) {
-    // Polite delay between requests
-    const now = Date.now();
-    const elapsed = now - lastRequestTime;
-    if (elapsed < REQUEST_DELAY_MS) {
-      await new Promise((r) => setTimeout(r, REQUEST_DELAY_MS - elapsed));
-    }
-    lastRequestTime = Date.now();
-
     try {
       const res = await fetch(url, { headers: FETCH_HEADERS, redirect: "follow" });
       if (!res.ok) throw new Error(`HTTP ${res.status} for ${url}`);
