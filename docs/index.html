@@ -91,7 +91,8 @@
         flex-wrap: wrap;
       }
 
-      .feed-links a {
+      .feed-links a,
+      .feed-links button {
         display: inline-flex;
         align-items: center;
         gap: 0.375rem;
@@ -103,13 +104,18 @@
         border: 1px solid var(--border);
         border-radius: 6px;
         transition: border-color 0.15s;
+        background: none;
+        cursor: pointer;
+        font-family: inherit;
       }
 
-      .feed-links a:hover {
+      .feed-links a:hover,
+      .feed-links button:hover {
         border-color: var(--accent);
       }
 
-      .feed-links a svg {
+      .feed-links a svg,
+      .feed-links button svg {
         width: 14px;
         height: 14px;
         flex-shrink: 0;
@@ -144,24 +150,24 @@
           agents, evaluations, developer tools, and infrastructure.
         </p>
         <div class="feed-links">
-          <a href="./anthropic-engineering.xml">
+          <button data-feed="anthropic-engineering.xml">
             <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
               <path d="M4 11a9 9 0 0 1 9 9" /><path d="M4 4a16 16 0 0 1 16 16" /><circle cx="5" cy="19" r="1" />
             </svg>
             RSS
-          </a>
-          <a href="./anthropic-engineering.atom">
+          </button>
+          <button data-feed="anthropic-engineering.atom">
             <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
               <path d="M4 11a9 9 0 0 1 9 9" /><path d="M4 4a16 16 0 0 1 16 16" /><circle cx="5" cy="19" r="1" />
             </svg>
             Atom
-          </a>
-          <a href="./anthropic-engineering.json">
+          </button>
+          <button data-feed="anthropic-engineering.json">
             <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
               <polyline points="16 18 22 12 16 6" /><polyline points="8 6 2 12 8 18" />
             </svg>
             JSON Feed
-          </a>
+          </button>
         </div>
       </div>
 
@@ -172,24 +178,24 @@
           language models, safety, evaluations, and scientific discovery.
         </p>
         <div class="feed-links">
-          <a href="./openai-research.xml">
+          <button data-feed="openai-research.xml">
             <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
               <path d="M4 11a9 9 0 0 1 9 9" /><path d="M4 4a16 16 0 0 1 16 16" /><circle cx="5" cy="19" r="1" />
             </svg>
             RSS
-          </a>
-          <a href="./openai-research.atom">
+          </button>
+          <button data-feed="openai-research.atom">
             <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
               <path d="M4 11a9 9 0 0 1 9 9" /><path d="M4 4a16 16 0 0 1 16 16" /><circle cx="5" cy="19" r="1" />
             </svg>
             Atom
-          </a>
-          <a href="./openai-research.json">
+          </button>
+          <button data-feed="openai-research.json">
             <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
               <polyline points="16 18 22 12 16 6" /><polyline points="8 6 2 12 8 18" />
             </svg>
             JSON Feed
-          </a>
+          </button>
         </div>
       </div>
 
@@ -220,5 +226,19 @@
         </p>
       </footer>
     </main>
+    <script>
+      const base = location.href.replace(/\/[^/]*$/, "/");
+      document.querySelectorAll("button[data-feed]").forEach((btn) => {
+        btn.addEventListener("click", () => {
+          const url = base + btn.dataset.feed;
+          navigator.clipboard.writeText(url).then(() => {
+            const label = btn.lastChild;
+            const original = label.textContent;
+            label.textContent = " Copied!";
+            setTimeout(() => (label.textContent = original), 1500);
+          });
+        });
+      });
+    </script>
   </body>
 </html>
