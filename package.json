@@ -5,6 +5,7 @@
   "type": "module",
   "scripts": {
     "crawl": "node crawler/crawl.mjs",
+    "crawl:openai-research": "node crawler/crawl-openai-research.mjs",
     "build": "node crawler/build-feed.mjs"
   },
   "dependencies": {
