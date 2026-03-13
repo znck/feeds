@@ -1,9 +1,17 @@
 /**
- * RSS Feed Crawler for Anthropic Engineering Blog
+ * Generic Webpage-to-RSS Crawler
  *
- * Fetches the blog listing page, extracts article metadata, and
- * incrementally updates the local articles database. New articles
- * are enriched by fetching their individual pages for full descriptions.
+ * Discovers articles from any website using one of two methods:
+ *   - "html":    Parse a listing page for links matching a pattern
+ *   - "sitemap": Parse a sitemap XML for article URLs
+ *
+ * Then enriches new articles in parallel by fetching just the <head>
+ * of each page for SEO metadata (og:title, og:description, dates, og:image).
+ *
+ * Configuration is read from feeds.json. Run a specific feed with:
+ *   node crawler/crawl.mjs <slug>
+ * Or crawl all feeds:
+ *   node crawler/crawl.mjs
  */
 
 import * as cheerio from "cheerio";
@@ -13,14 +21,12 @@ import { dirname, join } from "node:path";
 
 const __dirname = dirname(fileURLToPath(import.meta.url));
 const ROOT = join(__dirname, "..");
-const ARTICLES_PATH = join(ROOT, "data", "articles.json");
+const FEEDS_CONFIG_PATH = join(ROOT, "feeds.json");
 
-const BLOG_URL = "https://www.anthropic.com/engineering";
-const BASE_URL = "https://www.anthropic.com";
+const CONCURRENCY = 10;
 
-/**
- * Fetches a URL with retries and exponential backoff.
- */
+// --- Shared utilities ---
+
 async function fetchWithRetry(url, retries = 3) {
   for (let i = 0; i <= retries; i++) {
     try {
@@ -41,51 +47,77 @@ async function fetchWithRetry(url, retries = 3) {
   }
 }
 
+async function runInParallel(items, fn, concurrency = CONCURRENCY) {
+  const results = [];
+  let index = 0;
+
+  async function worker() {
+    while (index < items.length) {
+      const i = index++;
+      results[i] = await fn(items[i]);
+    }
+  }
+
+  await Promise.all(
+    Array.from({ length: Math.min(concurrency, items.length) }, () => worker())
+  );
+  return results;
+}
+
+function tryParseDate(val) {
+  const date = new Date(val);
+  return Number.isNaN(date.getTime()) ? null : date.toISOString();
+}
+
+function slugFromUrl(url) {
+  const path = new URL(url).pathname.replace(/\/$/, "");
+  return path.split("/").pop();
+}
+
 /**
- * Parses the engineering blog listing page and extracts article metadata.
+ * Extract just the <head> content from HTML to avoid parsing large bodies.
  */
-function parseListingPage(html) {
+function extractHead(html) {
+  const headEnd = html.indexOf("</head>");
+  if (headEnd !== -1) {
+    return html.slice(0, headEnd + 7);
+  }
+  return html;
+}
+
+// --- Discovery methods ---
+
+function discoverFromHtml(html, config) {
   const $ = cheerio.load(html);
   const articles = [];
+  const pattern = new RegExp(config.discovery.linkPattern);
 
-  // Find all links to /engineering/* articles
-  $('a[href*="/engineering/"]').each((_, el) => {
+  $("a[href]").each((_, el) => {
     const href = $(el).attr("href");
-    if (!href || href === "/engineering" || href === "/engineering/")
-      return;
+    if (!href || !pattern.test(href)) return;
 
-    // Normalize URL
-    const url = href.startsWith("http") ? href : `${BASE_URL}${href}`;
-    const slug = href.replace(/^\/engineering\//, "").replace(/\/$/, "");
+    const url = new URL(href, config.discovery.url).href;
+    const slug = slugFromUrl(url);
 
-    // Skip if already collected (dedup by slug)
-    if (articles.some((a) => a.slug === slug)) return;
+    if (!slug || articles.some((a) => a.slug === slug)) return;
 
-    // Walk up to find the card container and extract text
+    // Walk up to find the card container
     const card = $(el).closest(
       'div, article, li, [class*="card"], [class*="article"], [class*="post"]'
     );
     const container = card.length ? card : $(el);
 
-    // Extract title - prefer heading tags, fallback to link text
+    // Extract title
     let title = "";
     const heading = container.find("h1, h2, h3, h4").first();
-    if (heading.length) {
-      title = heading.text().trim();
-    }
-    if (!title) {
-      title = $(el).text().trim();
-    }
-
-    // Skip non-article links (navigation, etc.)
+    if (heading.length) title = heading.text().trim();
+    if (!title) title = $(el).text().trim();
     if (!title || title.length < 5) return;
 
     // Extract description
     let description = "";
     const para = container.find("p").first();
-    if (para.length) {
-      description = para.text().trim();
-    }
+    if (para.length) description = para.text().trim();
 
     articles.push({ slug, url, title, description });
   });
@@ -93,89 +125,110 @@ function parseListingPage(html) {
   return articles;
 }
 
-/**
- * Fetches an individual article page to extract full metadata.
- */
+function discoverFromSitemap(xml) {
+  const $ = cheerio.load(xml, { xmlMode: true });
+  const articles = [];
+
+  $("url").each((_, el) => {
+    const loc = $(el).find("loc").text().trim();
+    if (!loc) return;
+
+    const slug = slugFromUrl(loc);
+    if (!slug) return;
+
+    articles.push({ slug, url: loc });
+  });
+
+  return articles;
+}
+
+// --- Enrichment ---
+
+function enrichFromHead($, article) {
+  // Title
+  if (!article.title) {
+    const ogTitle = $('meta[property="og:title"]').attr("content");
+    const pageTitle = $("title").text().replace(/\s*\|.*$/, "").trim();
+    article.title = ogTitle || pageTitle || "";
+  }
+
+  // Description — keep the longer one
+  const ogDesc = $('meta[property="og:description"]').attr("content");
+  const metaDesc = $('meta[name="description"]').attr("content");
+  const bestDesc = ogDesc || metaDesc || "";
+  if (bestDesc.length > (article.description?.length || 0)) {
+    article.description = bestDesc;
+  }
+
+  // Date — try multiple sources in <head>
+  if (!article.date) {
+    const dateSelectors = [
+      { sel: 'meta[property="article:published_time"]', attr: "content" },
+      { sel: 'meta[name="date"]', attr: "content" },
+      { sel: "time[datetime]", attr: "datetime" },
+    ];
+    for (const { sel, attr } of dateSelectors) {
+      const el = $(sel).first();
+      if (el.length) {
+        const val = el.attr(attr);
+        if (val) {
+          const parsed = tryParseDate(val);
+          if (parsed) {
+            article.date = parsed;
+            break;
+          }
+        }
+      }
+    }
+  }
+
+  // Image
+  if (!article.image) {
+    const ogImage = $('meta[property="og:image"]').attr("content");
+    if (ogImage) article.image = ogImage;
+  }
+}
+
 async function enrichArticle(article) {
   try {
     const html = await fetchWithRetry(article.url);
-    const $ = cheerio.load(html);
-
-    // Try to extract date from meta tags or page content
-    const dateSelectors = [
-      'meta[property="article:published_time"]',
-      'meta[name="date"]',
-      'time[datetime]',
-    ];
-
-    let date = null;
-    for (const sel of dateSelectors) {
-      const el = $(sel);
-      if (el.length) {
-        date = el.attr("content") || el.attr("datetime");
-        if (date) break;
-      }
-    }
-
-    // Fallback: look for date patterns in text
-    if (!date) {
-      const text = $("body").text();
-      const dateMatch = text.match(
-        /(?:Published|Posted)\s+(\w+ \d{1,2},?\s*\d{4})/i
-      );
-      if (dateMatch) {
-        date = new Date(dateMatch[1]).toISOString();
-      }
-    }
-
-    // Try to get a better description from meta tags
-    const metaDesc =
-      $('meta[property="og:description"]').attr("content") ||
-      $('meta[name="description"]').attr("content");
-
-    if (metaDesc && metaDesc.length > (article.description?.length || 0)) {
-      article.description = metaDesc;
-    }
-
-    // Get OG image
-    const ogImage = $('meta[property="og:image"]').attr("content");
-    if (ogImage) {
-      article.image = ogImage;
-    }
-
-    if (date) {
-      article.date = date;
-    }
+    const head = extractHead(html);
+    const $ = cheerio.load(head);
+    enrichFromHead($, article);
   } catch (err) {
-    console.warn(`Failed to enrich ${article.url}: ${err.message}`);
+    console.warn(`  Failed to enrich ${article.url}: ${err.message}`);
+  }
+
+  // Fallback title from slug
+  if (!article.title) {
+    article.title = article.slug
+      .replace(/-/g, " ")
+      .replace(/\b\w/g, (c) => c.toUpperCase());
   }
 
   return article;
 }
 
-/**
- * Loads existing articles from the data file.
- */
-async function loadExistingArticles() {
+// --- Data management ---
+
+async function loadArticles(path) {
   try {
-    const data = await readFile(ARTICLES_PATH, "utf-8");
-    return JSON.parse(data);
+    return JSON.parse(await readFile(path, "utf-8"));
   } catch {
     return [];
   }
 }
 
-/**
- * Merges new articles into the existing list, preserving existing data.
- */
 function mergeArticles(existing, discovered) {
   const bySlug = new Map(existing.map((a) => [a.slug, a]));
 
   for (const article of discovered) {
     if (!bySlug.has(article.slug)) {
-      bySlug.set(article.slug, { ...article, discoveredAt: new Date().toISOString() });
+      bySlug.set(article.slug, {
+        ...article,
+        discoveredAt: new Date().toISOString(),
+      });
     } else {
-      // Update description if the new one is longer/better
       const prev = bySlug.get(article.slug);
       if (
         article.description &&
@@ -189,42 +242,45 @@ function mergeArticles(existing, discovered) {
   return Array.from(bySlug.values());
 }
 
-async function main() {
-  console.log("Fetching engineering blog listing...");
-  const html = await fetchWithRetry(BLOG_URL);
-  const discovered = parseListingPage(html);
-  console.log(`Found ${discovered.length} articles on listing page.`);
+// --- Main ---
 
-  const existing = await loadExistingArticles();
+async function crawlFeed(config) {
+  const dataPath = join(ROOT, "data", `${config.slug}.json`);
+
+  console.log(`\n--- Crawling: ${config.title} ---`);
+
+  // Discover articles
+  let discovered;
+  const { method, url } = config.discovery;
+  const content = await fetchWithRetry(url);
+
+  if (method === "sitemap") {
+    discovered = discoverFromSitemap(content);
+  } else {
+    discovered = discoverFromHtml(content, config);
+  }
+  console.log(`Found ${discovered.length} articles.`);
+
+  // Load existing
+  const existing = await loadArticles(dataPath);
   console.log(`${existing.length} articles in local database.`);
 
-  // Find truly new articles
+  // Collect articles needing enrichment
   const existingSlugs = new Set(existing.map((a) => a.slug));
   const newArticles = discovered.filter((a) => !existingSlugs.has(a.slug));
-  console.log(`${newArticles.length} new articles to enrich.`);
+  const needsEnrichment = existing.filter((a) => !a.date || !a.title);
+  const toEnrich = [...newArticles, ...needsEnrichment];
 
-  // Enrich new articles with full metadata
-  for (const article of newArticles) {
-    console.log(`  Enriching: ${article.title}`);
-    await enrichArticle(article);
-    // Be polite - small delay between requests
-    await new Promise((r) => setTimeout(r, 500));
-  }
+  console.log(
+    `Enriching ${toEnrich.length} articles (${newArticles.length} new, ${needsEnrichment.length} incomplete)...`
+  );
 
-  // Also enrich existing articles that are missing dates
-  const needsEnrichment = existing.filter((a) => !a.date);
-  if (needsEnrichment.length > 0) {
-    console.log(
-      `${needsEnrichment.length} existing articles need date enrichment.`
-    );
-    for (const article of needsEnrichment) {
-      console.log(`  Enriching: ${article.title}`);
-      await enrichArticle(article);
-      await new Promise((r) => setTimeout(r, 500));
-    }
-  }
+  await runInParallel(toEnrich, async (article) => {
+    console.log(`  Enriching: ${article.title || article.slug}`);
+    return enrichArticle(article);
+  });
 
-  // Merge and sort
+  // Merge, sort, save
   let articles = mergeArticles(existing, discovered);
   articles.sort((a, b) => {
     if (a.date && b.date) return new Date(b.date) - new Date(a.date);
@@ -233,11 +289,27 @@ async function main() {
     return 0;
   });
 
-  // Save
-  await writeFile(ARTICLES_PATH, JSON.stringify(articles, null, 2) + "\n");
-  console.log(`Saved ${articles.length} articles to database.`);
+  await writeFile(dataPath, JSON.stringify(articles, null, 2) + "\n");
+  console.log(`Saved ${articles.length} articles.`);
+}
 
-  return articles;
+async function main() {
+  const feeds = JSON.parse(await readFile(FEEDS_CONFIG_PATH, "utf-8"));
+  const target = process.argv[2];
+
+  const selected = target
+    ? feeds.filter((f) => f.slug === target)
+    : feeds;
+
+  if (selected.length === 0) {
+    console.error(`Unknown feed: ${target}`);
+    console.error(`Available: ${feeds.map((f) => f.slug).join(", ")}`);
+    process.exit(1);
+  }
+
+  for (const config of selected) {
+    await crawlFeed(config);
+  }
 }
 
 main().catch((err) => {
