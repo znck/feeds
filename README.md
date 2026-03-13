@@ -2,11 +2,7 @@
 
 Unofficial RSS feeds for engineering blogs that don't offer their own. Updated automatically every 6 hours via GitHub Actions.
 
-## Feeds
-
-| Blog | RSS | Atom | JSON Feed |
-|------|-----|------|-----------|
-| [Anthropic Engineering](https://www.anthropic.com/engineering) | [RSS](https://znck.github.io/feeds/anthropic-engineering.xml) | [Atom](https://znck.github.io/feeds/anthropic-engineering.atom) | [JSON](https://znck.github.io/feeds/anthropic-engineering.json) |
+Available feeds are listed at [znck.github.io/feeds](https://znck.github.io/feeds/). Feed sources are configured in [`feeds.json`](./feeds.json).
 
 ## How it works
 
