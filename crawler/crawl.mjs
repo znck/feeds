@@ -15,10 +15,11 @@
  */
 
 import * as cheerio from "cheerio";
-import initCycleTLS from "cycletls";
 import { readFile, writeFile } from "node:fs/promises";
 import { fileURLToPath } from "node:url";
 import { dirname, join } from "node:path";
+import { Agent, request as undiciRequest } from "undici";
+import tls from "node:tls";
 
 const __dirname = dirname(fileURLToPath(import.meta.url));
 const ROOT = join(__dirname, "..");
@@ -28,7 +29,23 @@ const CONCURRENCY = 10;
 
 // --- Shared utilities ---
 
-// Chrome 131 on macOS — headers must be consistent with the TLS fingerprint
+// Reorder TLS ciphers to produce a non-default JA3 fingerprint.
+// Cloudflare fingerprints the TLS handshake — Node.js's default cipher order
+// is a known bot signature. Swapping the first TLS 1.3 ciphers changes the
+// JA3 hash while remaining fully secure.
+const defaultCiphers = tls.DEFAULT_CIPHERS.split(":");
+const ciphers = [
+  defaultCiphers[0],
+  defaultCiphers[2],
+  defaultCiphers[1],
+  ...defaultCiphers.slice(3),
+].join(":");
+
+const tlsAgent = new Agent({
+  connect: { ciphers },
+});
+
+// Chrome-like headers — must look consistent with a real browser
 const FETCH_HEADERS = {
   "User-Agent":
     "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/131.0.0.0 Safari/537.36",
@@ -46,41 +63,23 @@ const FETCH_HEADERS = {
   "Upgrade-Insecure-Requests": "1",
 };
 
-// Chrome 131 JA3 fingerprint
-const CHROME_JA3 =
-  "771,4865-4866-4867-49195-49199-49196-49200-52393-52392-49171-49172-156-157-47-53,0-23-65281-10-11-35-16-5-13-18-51-45-43-27-17513-21,29-23-24,0";
-
-let cycleTLS = null;
-
-async function getCycleTLS() {
-  if (!cycleTLS) cycleTLS = await initCycleTLS();
-  return cycleTLS;
-}
-
-async function closeCycleTLS() {
-  if (cycleTLS) {
-    await cycleTLS.exit();
-    cycleTLS = null;
-  }
-}
-
 async function fetchWithRetry(url, retries = 3) {
   for (let i = 0; i <= retries; i++) {
     try {
-      const client = await getCycleTLS();
-      const res = await client(url, {
-        body: "",
-        ja3: CHROME_JA3,
-        userAgent: FETCH_HEADERS["User-Agent"],
+      const { statusCode, body } = await undiciRequest(url, {
+        method: "GET",
         headers: FETCH_HEADERS,
-      }, "get");
-      if (res.status === 403 || res.status === 429) {
-        const err = new Error(`HTTP ${res.status} for ${url}`);
-        err.status = res.status;
+        dispatcher: tlsAgent,
+        maxRedirections: 5,
+      });
+      const text = await body.text();
+      if (statusCode === 403 || statusCode === 429) {
+        const err = new Error(`HTTP ${statusCode} for ${url}`);
+        err.status = statusCode;
         throw err;
       }
-      if (res.status >= 400) throw new Error(`HTTP ${res.status} for ${url}`);
-      return res.body;
+      if (statusCode >= 400) throw new Error(`HTTP ${statusCode} for ${url}`);
+      return text;
     } catch (err) {
       if (i === retries) throw err;
       const delay = Math.pow(2, i + 1) * 1000;
@@ -367,11 +366,10 @@ async function main() {
   }
 
   await Promise.all(selected.map((config) => crawlFeed(config)));
-  await closeCycleTLS();
+  await tlsAgent.close();
 }
 
-main().catch(async (err) => {
+main().catch((err) => {
   console.error("Crawl failed:", err);
-  await closeCycleTLS();
   process.exit(1);
 });
