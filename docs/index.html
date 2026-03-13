@@ -91,8 +91,7 @@
         flex-wrap: wrap;
       }
 
-      .feed-links a,
-      .feed-links button {
+      .feed-links a {
         position: relative;
         display: inline-flex;
         align-items: center;
@@ -105,22 +104,19 @@
         border: 1px solid var(--border);
         border-radius: 6px;
         transition: color 0.2s, border-color 0.2s;
-        background: none;
         cursor: pointer;
-        font-family: inherit;
       }
 
-      .feed-links a:hover,
-      .feed-links button:hover {
+      .feed-links a:hover {
         border-color: var(--accent);
       }
 
-      .feed-links button.copied {
+      .feed-links a.copied {
         color: #16a34a;
         border-color: #16a34a;
       }
 
-      .feed-links button::after {
+      .feed-links a[role="button"]::after {
         content: "Copied!";
         position: absolute;
         bottom: calc(100% + 6px);
@@ -138,13 +134,12 @@
         transition: opacity 0.15s, transform 0.15s;
       }
 
-      .feed-links button.copied::after {
+      .feed-links a.copied::after {
         opacity: 1;
         transform: translateX(-50%) translateY(0);
       }
 
-      .feed-links a svg,
-      .feed-links button svg {
+      .feed-links a svg {
         width: 14px;
         height: 14px;
         flex-shrink: 0;
@@ -179,24 +174,24 @@
           agents, evaluations, developer tools, and infrastructure.
         </p>
         <div class="feed-links">
-          <button data-feed="anthropic-engineering.xml">
+          <a href="./anthropic-engineering.xml" role="button">
             <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
               <path d="M4 11a9 9 0 0 1 9 9" /><path d="M4 4a16 16 0 0 1 16 16" /><circle cx="5" cy="19" r="1" />
             </svg>
             RSS
-          </button>
-          <button data-feed="anthropic-engineering.atom">
+          </a>
+          <a href="./anthropic-engineering.atom" role="button">
             <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
               <path d="M4 11a9 9 0 0 1 9 9" /><path d="M4 4a16 16 0 0 1 16 16" /><circle cx="5" cy="19" r="1" />
             </svg>
             Atom
-          </button>
-          <button data-feed="anthropic-engineering.json">
+          </a>
+          <a href="./anthropic-engineering.json" role="button">
             <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
               <polyline points="16 18 22 12 16 6" /><polyline points="8 6 2 12 8 18" />
             </svg>
             JSON Feed
-          </button>
+          </a>
         </div>
       </div>
 
@@ -207,24 +202,24 @@
           language models, safety, evaluations, and scientific discovery.
         </p>
         <div class="feed-links">
-          <button data-feed="openai-research.xml">
+          <a href="./openai-research.xml" role="button">
             <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
               <path d="M4 11a9 9 0 0 1 9 9" /><path d="M4 4a16 16 0 0 1 16 16" /><circle cx="5" cy="19" r="1" />
             </svg>
             RSS
-          </button>
-          <button data-feed="openai-research.atom">
+          </a>
+          <a href="./openai-research.atom" role="button">
             <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
               <path d="M4 11a9 9 0 0 1 9 9" /><path d="M4 4a16 16 0 0 1 16 16" /><circle cx="5" cy="19" r="1" />
             </svg>
             Atom
-          </button>
-          <button data-feed="openai-research.json">
+          </a>
+          <a href="./openai-research.json" role="button">
             <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
               <polyline points="16 18 22 12 16 6" /><polyline points="8 6 2 12 8 18" />
             </svg>
             JSON Feed
-          </button>
+          </a>
         </div>
       </div>
 
@@ -257,18 +252,18 @@
     </main>
     <script>
       const check = `<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12" /></svg>`;
-      const base = location.href.replace(/\/[^/]*$/, "/");
-      document.querySelectorAll("button[data-feed]").forEach((btn) => {
-        btn.addEventListener("click", () => {
-          const url = base + btn.dataset.feed;
+      document.querySelectorAll('a[role="button"]').forEach((link) => {
+        link.addEventListener("click", (e) => {
+          e.preventDefault();
+          const url = link.href;
           navigator.clipboard.writeText(url).then(() => {
-            const svg = btn.querySelector("svg");
+            const svg = link.querySelector("svg");
             const original = svg.outerHTML;
             svg.outerHTML = check;
-            btn.classList.add("copied");
+            link.classList.add("copied");
             setTimeout(() => {
-              btn.querySelector("svg").outerHTML = original;
-              btn.classList.remove("copied");
+              link.querySelector("svg").outerHTML = original;
+              link.classList.remove("copied");
             }, 1500);
           });
         });
