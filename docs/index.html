@@ -93,6 +93,7 @@
 
       .feed-links a,
       .feed-links button {
+        position: relative;
         display: inline-flex;
         align-items: center;
         gap: 0.375rem;
@@ -117,6 +118,29 @@
       .feed-links button.copied {
         color: #16a34a;
         border-color: #16a34a;
+      }
+
+      .feed-links button::after {
+        content: "Copied!";
+        position: absolute;
+        bottom: calc(100% + 6px);
+        left: 50%;
+        transform: translateX(-50%) translateY(4px);
+        background: var(--fg);
+        color: var(--bg);
+        font-size: 0.6875rem;
+        font-weight: 500;
+        padding: 0.25rem 0.5rem;
+        border-radius: 4px;
+        white-space: nowrap;
+        opacity: 0;
+        pointer-events: none;
+        transition: opacity 0.15s, transform 0.15s;
+      }
+
+      .feed-links button.copied::after {
+        opacity: 1;
+        transform: translateX(-50%) translateY(0);
       }
 
       .feed-links a svg,
