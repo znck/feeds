@@ -256,16 +256,21 @@
         link.addEventListener("click", (e) => {
           e.preventDefault();
           const url = link.href;
-          navigator.clipboard.writeText(url).then(() => {
-            const svg = link.querySelector("svg");
-            const original = svg.outerHTML;
-            svg.outerHTML = check;
-            link.classList.add("copied");
-            setTimeout(() => {
-              link.querySelector("svg").outerHTML = original;
-              link.classList.remove("copied");
-            }, 1500);
-          });
+          navigator.clipboard.writeText(url).then(
+            () => {
+              const svg = link.querySelector("svg");
+              const original = svg.outerHTML;
+              svg.outerHTML = check;
+              link.classList.add("copied");
+              setTimeout(() => {
+                link.querySelector("svg").outerHTML = original;
+                link.classList.remove("copied");
+              }, 1500);
+            },
+            () => {
+              window.location.href = url;
+            }
+          );
         });
       });
     </script>
