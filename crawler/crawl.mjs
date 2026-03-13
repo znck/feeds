@@ -5,8 +5,8 @@
  *   - "html":    Parse a listing page for links matching a pattern
  *   - "sitemap": Parse a sitemap XML for article URLs
  *
- * Then enriches each new article by fetching its page for metadata
- * (og:title, og:description, dates, og:image).
+ * Then enriches new articles in parallel by fetching just the <head>
+ * of each page for SEO metadata (og:title, og:description, dates, og:image).
  *
  * Configuration is read from feeds.json. Run a specific feed with:
  *   node crawler/crawl.mjs <slug>
@@ -22,6 +22,8 @@ import { dirname, join } from "node:path";
 const __dirname = dirname(fileURLToPath(import.meta.url));
 const ROOT = join(__dirname, "..");
 const FEEDS_CONFIG_PATH = join(ROOT, "feeds.json");
+
+const CONCURRENCY = 10;
 
 // --- Shared utilities ---
 
@@ -45,9 +47,37 @@ async function fetchWithRetry(url, retries = 3) {
   }
 }
 
+async function runInParallel(items, fn, concurrency = CONCURRENCY) {
+  const results = [];
+  let index = 0;
+
+  async function worker() {
+    while (index < items.length) {
+      const i = index++;
+      results[i] = await fn(items[i]);
+    }
+  }
+
+  await Promise.all(
+    Array.from({ length: Math.min(concurrency, items.length) }, () => worker())
+  );
+  return results;
+}
+
 function slugFromUrl(url) {
   const path = new URL(url).pathname.replace(/\/$/, "");
   return path.split("/").pop();
+}
+
+/**
+ * Extract just the <head> content from HTML to avoid parsing large bodies.
+ */
+function extractHead(html) {
+  const headEnd = html.indexOf("</head>");
+  if (headEnd !== -1) {
+    return html.slice(0, headEnd + 7);
+  }
+  return html;
 }
 
 // --- Discovery methods ---
@@ -110,7 +140,7 @@ function discoverFromSitemap(xml) {
 
 // --- Enrichment ---
 
-function enrichFromHtml($, article) {
+function enrichFromHead($, article) {
   // Title
   if (!article.title) {
     const ogTitle = $('meta[property="og:title"]').attr("content");
@@ -126,7 +156,7 @@ function enrichFromHtml($, article) {
     article.description = bestDesc;
   }
 
-  // Date — try multiple sources
+  // Date — try multiple sources in <head>
   if (!article.date) {
     const dateSelectors = [
       { sel: 'meta[property="article:published_time"]', attr: "content" },
@@ -145,17 +175,6 @@ function enrichFromHtml($, article) {
     }
   }
 
-  // Fallback: date from text
-  if (!article.date) {
-    const text = $("body").text();
-    const dateMatch = text.match(
-      /(?:Published|Posted)\s+(\w+ \d{1,2},?\s*\d{4})/i
-    );
-    if (dateMatch) {
-      article.date = new Date(dateMatch[1]).toISOString();
-    }
-  }
-
   // Image
   if (!article.image) {
     const ogImage = $('meta[property="og:image"]').attr("content");
@@ -166,8 +185,9 @@ function enrichFromHtml($, article) {
 async function enrichArticle(article) {
   try {
     const html = await fetchWithRetry(article.url);
-    const $ = cheerio.load(html);
-    enrichFromHtml($, article);
+    const head = extractHead(html);
+    const $ = cheerio.load(head);
+    enrichFromHead($, article);
   } catch (err) {
     console.warn(`  Failed to enrich ${article.url}: ${err.message}`);
   }
@@ -238,27 +258,20 @@ async function crawlFeed(config) {
   const existing = await loadArticles(dataPath);
   console.log(`${existing.length} articles in local database.`);
 
-  // Find new articles to enrich
+  // Collect articles needing enrichment
   const existingSlugs = new Set(existing.map((a) => a.slug));
   const newArticles = discovered.filter((a) => !existingSlugs.has(a.slug));
-  console.log(`${newArticles.length} new articles to enrich.`);
-
-  for (const article of newArticles) {
-    console.log(`  Enriching: ${article.title || article.slug}`);
-    await enrichArticle(article);
-    await new Promise((r) => setTimeout(r, 500));
-  }
-
-  // Re-enrich existing articles missing key data
   const needsEnrichment = existing.filter((a) => !a.date || !a.title);
-  if (needsEnrichment.length > 0) {
-    console.log(`${needsEnrichment.length} existing articles need enrichment.`);
-    for (const article of needsEnrichment) {
-      console.log(`  Enriching: ${article.title || article.slug}`);
-      await enrichArticle(article);
-      await new Promise((r) => setTimeout(r, 500));
-    }
-  }
+  const toEnrich = [...newArticles, ...needsEnrichment];
+
+  console.log(
+    `Enriching ${toEnrich.length} articles (${newArticles.length} new, ${needsEnrichment.length} incomplete)...`
+  );
+
+  await runInParallel(toEnrich, async (article) => {
+    console.log(`  Enriching: ${article.title || article.slug}`);
+    return enrichArticle(article);
+  });
 
   // Merge, sort, save
   let articles = mergeArticles(existing, discovered);
