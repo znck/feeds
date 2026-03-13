@@ -24,18 +24,33 @@ const ROOT = join(__dirname, "..");
 const FEEDS_CONFIG_PATH = join(ROOT, "feeds.json");
 
 const CONCURRENCY = 10;
+const REQUEST_DELAY_MS = 1000; // polite delay between requests
 
 // --- Shared utilities ---
 
+const FETCH_HEADERS = {
+  "User-Agent":
+    "Mozilla/5.0 (compatible; RSS-Feed-Crawler/1.0; +https://github.com/znck/feeds)",
+  Accept: "text/html,application/xhtml+xml,application/xml;q=0.9,*/*;q=0.8",
+  "Accept-Language": "en-US,en;q=0.5",
+  "Accept-Encoding": "gzip, deflate, br",
+  Connection: "keep-alive",
+};
+
+let lastRequestTime = 0;
+
 async function fetchWithRetry(url, retries = 3) {
   for (let i = 0; i <= retries; i++) {
+    // Polite delay between requests
+    const now = Date.now();
+    const elapsed = now - lastRequestTime;
+    if (elapsed < REQUEST_DELAY_MS) {
+      await new Promise((r) => setTimeout(r, REQUEST_DELAY_MS - elapsed));
+    }
+    lastRequestTime = Date.now();
+
     try {
-      const res = await fetch(url, {
-        headers: {
-          "User-Agent":
-            "RSS-Feed-Crawler/1.0 (+https://github.com/znck/feeds)",
-        },
-      });
+      const res = await fetch(url, { headers: FETCH_HEADERS, redirect: "follow" });
       if (!res.ok) throw new Error(`HTTP ${res.status} for ${url}`);
       return await res.text();
     } catch (err) {
@@ -279,10 +294,14 @@ async function crawlFeed(config) {
     `Enriching ${toEnrich.length} articles (${newArticles.length} new, ${needsEnrichment.length} incomplete)...`
   );
 
-  await runInParallel(toEnrich, async (article) => {
-    console.log(`  Enriching: ${article.title || article.slug}`);
-    return enrichArticle(article);
-  });
+  await runInParallel(
+    toEnrich,
+    async (article) => {
+      console.log(`  Enriching: ${article.title || article.slug}`);
+      return enrichArticle(article);
+    },
+    3 // lower concurrency to avoid triggering bot protection
+  );
 
   // Merge, sort, save
   let articles = mergeArticles(existing, discovered);
