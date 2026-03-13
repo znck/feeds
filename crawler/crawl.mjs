@@ -64,6 +64,11 @@ async function runInParallel(items, fn, concurrency = CONCURRENCY) {
   return results;
 }
 
+function tryParseDate(val) {
+  const date = new Date(val);
+  return Number.isNaN(date.getTime()) ? null : date.toISOString();
+}
+
 function slugFromUrl(url) {
   const path = new URL(url).pathname.replace(/\/$/, "");
   return path.split("/").pop();
@@ -86,13 +91,12 @@ function discoverFromHtml(html, config) {
   const $ = cheerio.load(html);
   const articles = [];
   const pattern = new RegExp(config.discovery.linkPattern);
-  const baseUrl = new URL(config.discovery.url).origin;
 
   $("a[href]").each((_, el) => {
     const href = $(el).attr("href");
     if (!href || !pattern.test(href)) return;
 
-    const url = href.startsWith("http") ? href : `${baseUrl}${href}`;
+    const url = new URL(href, config.discovery.url).href;
     const slug = slugFromUrl(url);
 
     if (!slug || articles.some((a) => a.slug === slug)) return;
@@ -168,8 +172,11 @@ function enrichFromHead($, article) {
       if (el.length) {
         const val = el.attr(attr);
         if (val) {
-          article.date = new Date(val).toISOString();
-          break;
+          const parsed = tryParseDate(val);
+          if (parsed) {
+            article.date = parsed;
+            break;
+          }
         }
       }
     }

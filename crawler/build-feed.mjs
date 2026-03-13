@@ -19,7 +19,12 @@ const SITE_URL = "https://znck.github.io/feeds";
 
 async function buildFeed(config) {
   const articlesPath = join(ROOT, "data", `${config.slug}.json`);
-  const articles = JSON.parse(await readFile(articlesPath, "utf-8"));
+  let articles;
+  try {
+    articles = JSON.parse(await readFile(articlesPath, "utf-8"));
+  } catch {
+    articles = [];
+  }
   console.log(
     `Building ${config.slug} feed from ${articles.length} articles.`
   );
@@ -37,7 +42,10 @@ async function buildFeed(config) {
       rss2: `${SITE_URL}/${config.slug}.xml`,
       atom: `${SITE_URL}/${config.slug}.atom`,
     },
-    author: config.author,
+    author: {
+      name: config.author.name,
+      link: config.author.url,
+    },
   });
 
   for (const article of articles) {
