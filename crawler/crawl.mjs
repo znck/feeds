@@ -40,6 +40,11 @@ async function fetchWithRetry(url, retries = 3) {
   for (let i = 0; i <= retries; i++) {
     try {
       const res = await fetch(url, { headers: FETCH_HEADERS, redirect: "follow" });
+      if (res.status === 403 || res.status === 429) {
+        const err = new Error(`HTTP ${res.status} for ${url}`);
+        err.status = res.status;
+        throw err;
+      }
       if (!res.ok) throw new Error(`HTTP ${res.status} for ${url}`);
       return await res.text();
     } catch (err) {
@@ -54,16 +59,25 @@ async function fetchWithRetry(url, retries = 3) {
 async function runInParallel(items, fn, concurrency = CONCURRENCY) {
   const results = [];
   let index = 0;
+  let limit = concurrency;
 
-  async function worker() {
+  async function worker(id) {
     while (index < items.length) {
+      if (id >= limit) return;
       const i = index++;
-      results[i] = await fn(items[i]);
+      results[i] = await fn(items[i], {
+        throttle() {
+          limit = Math.max(1, Math.floor(limit / 2));
+          console.warn(`Throttling — concurrency now ${limit}`);
+        },
+      });
     }
   }
 
   await Promise.all(
-    Array.from({ length: Math.min(concurrency, items.length) }, () => worker())
+    Array.from({ length: Math.min(concurrency, items.length) }, (_, id) =>
+      worker(id)
+    )
   );
   return results;
 }
@@ -197,13 +211,14 @@ function enrichFromHead($, article) {
   }
 }
 
-async function enrichArticle(article) {
+async function enrichArticle(article, { throttle } = {}) {
   try {
     const html = await fetchWithRetry(article.url);
     const head = extractHead(html);
     const $ = cheerio.load(head);
     enrichFromHead($, article);
   } catch (err) {
+    if ((err.status === 403 || err.status === 429) && throttle) throttle();
     console.warn(`  Failed to enrich ${article.url}: ${err.message}`);
   }
 
@@ -283,14 +298,10 @@ async function crawlFeed(config) {
     `Enriching ${toEnrich.length} articles (${newArticles.length} new, ${needsEnrichment.length} incomplete)...`
   );
 
-  await runInParallel(
-    toEnrich,
-    async (article) => {
-      console.log(`  Enriching: ${article.title || article.slug}`);
-      return enrichArticle(article);
-    },
-    3 // lower concurrency to avoid triggering bot protection
-  );
+  await runInParallel(toEnrich, async (article, ctx) => {
+    console.log(`  Enriching: ${article.title || article.slug}`);
+    return enrichArticle(article, ctx);
+  });
 
   // Merge, sort, save
   let articles = mergeArticles(existing, discovered);
@@ -319,9 +330,7 @@ async function main() {
     process.exit(1);
   }
 
-  for (const config of selected) {
-    await crawlFeed(config);
-  }
+  await Promise.all(selected.map((config) => crawlFeed(config)));
 }
 
 main().catch((err) => {
