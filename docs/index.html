@@ -103,7 +103,7 @@
         padding: 0.375rem 0.75rem;
         border: 1px solid var(--border);
         border-radius: 6px;
-        transition: border-color 0.15s;
+        transition: color 0.2s, border-color 0.2s;
         background: none;
         cursor: pointer;
         font-family: inherit;
@@ -112,6 +112,11 @@
       .feed-links a:hover,
       .feed-links button:hover {
         border-color: var(--accent);
+      }
+
+      .feed-links button.copied {
+        color: #16a34a;
+        border-color: #16a34a;
       }
 
       .feed-links a svg,
@@ -227,15 +232,20 @@
       </footer>
     </main>
     <script>
+      const check = `<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12" /></svg>`;
       const base = location.href.replace(/\/[^/]*$/, "/");
       document.querySelectorAll("button[data-feed]").forEach((btn) => {
         btn.addEventListener("click", () => {
           const url = base + btn.dataset.feed;
           navigator.clipboard.writeText(url).then(() => {
-            const label = btn.lastChild;
-            const original = label.textContent;
-            label.textContent = " Copied!";
-            setTimeout(() => (label.textContent = original), 1500);
+            const svg = btn.querySelector("svg");
+            const original = svg.outerHTML;
+            svg.outerHTML = check;
+            btn.classList.add("copied");
+            setTimeout(() => {
+              btn.querySelector("svg").outerHTML = original;
+              btn.classList.remove("copied");
+            }, 1500);
           });
         });
       });
