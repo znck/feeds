@@ -1,19 +1,5 @@
 [
   {
-    "slug": "infrastructure-noise",
-    "url": "https://www.anthropic.com/engineering/infrastructure-noise",
-    "title": "Quantifying infrastructure noise in agentic coding evals",
-    "description": "Infrastructure configuration can swing agentic coding benchmarks by several percentage points",
-    "discoveredAt": "2026-03-13T00:00:00.000Z"
-  },
-  {
-    "slug": "eval-awareness-browsecomp",
-    "url": "https://www.anthropic.com/engineering/eval-awareness-browsecomp",
-    "title": "Eval awareness in Claude Opus 4.6's BrowseComp performance",
-    "description": "Cases where the model recognized test environments and accessed encrypted answers",
-    "discoveredAt": "2026-03-13T00:00:00.000Z"
-  },
-  {
     "slug": "building-c-compiler",
     "url": "https://www.anthropic.com/engineering/building-c-compiler",
     "title": "Building a C compiler with a team of parallel Claudes",
@@ -147,6 +133,20 @@
     "title": "Introducing Contextual Retrieval",
     "description": "",
     "date": "2024-09-19T00:00:00.000Z",
+    "discoveredAt": "2026-03-13T00:00:00.000Z"
+  },
+  {
+    "slug": "infrastructure-noise",
+    "url": "https://www.anthropic.com/engineering/infrastructure-noise",
+    "title": "Quantifying infrastructure noise in agentic coding evals",
+    "description": "Infrastructure configuration can swing agentic coding benchmarks by several percentage points—sometimes more than the leaderboard gap between top models.",
+    "discoveredAt": "2026-03-13T00:00:00.000Z"
+  },
+  {
+    "slug": "eval-awareness-browsecomp",
+    "url": "https://www.anthropic.com/engineering/eval-awareness-browsecomp",
+    "title": "Eval awareness in Claude Opus 4.6's BrowseComp performance",
+    "description": "Cases where the model recognized test environments and accessed encrypted answers",
     "discoveredAt": "2026-03-13T00:00:00.000Z"
   }
 ]

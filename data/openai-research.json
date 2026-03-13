@@ -1,1 +1,196 @@
-[]
+[
+  {
+    "slug": "understanding-neural-networks-through-sparse-circuits",
+    "url": "https://openai.com/index/understanding-neural-networks-through-sparse-circuits/",
+    "title": "Understanding Neural Networks Through Sparse Circuits",
+    "discoveredAt": "2026-03-13T02:28:53.795Z"
+  },
+  {
+    "slug": "instruction-hierarchy-challenge",
+    "url": "https://openai.com/index/instruction-hierarchy-challenge/",
+    "title": "Improving instruction hierarchy in frontier LLMs",
+    "description": "IH-Challenge trains models to prioritize trusted instructions, improving instruction hierarchy, safety steerability, and resistance to prompt injection attacks.",
+    "image": "https://images.ctfassets.net/kftzwdyauwt9/1hgOrtUKV9JbWpgIZLElGG/f1e68fcb747aeb0cb87633a34bb71bb3/SEO_Card__1_.png?w=1600&h=900&fit=fill",
+    "discoveredAt": "2026-03-13T02:28:53.796Z"
+  },
+  {
+    "slug": "how-confessions-can-keep-language-models-honest",
+    "url": "https://openai.com/index/how-confessions-can-keep-language-models-honest/",
+    "title": "How Confessions Can Keep Language Models Honest",
+    "discoveredAt": "2026-03-13T02:28:53.796Z"
+  },
+  {
+    "slug": "why-language-models-hallucinate",
+    "url": "https://openai.com/index/why-language-models-hallucinate/",
+    "title": "Why language models hallucinate",
+    "description": "OpenAI’s new research explains why language models hallucinate. The findings show how improved evaluations can enhance AI reliability, honesty, and safety.",
+    "image": "https://images.ctfassets.net/kftzwdyauwt9/5q3iK91iYCslMpYW0fmPNc/50776ce6fc897eacb94d2c05533dba96/oai_GA_Stories_16.9.png?w=1600&h=900&fit=fill",
+    "discoveredAt": "2026-03-13T02:28:53.796Z"
+  },
+  {
+    "slug": "reasoning-models-chain-of-thought-controllability",
+    "url": "https://openai.com/index/reasoning-models-chain-of-thought-controllability/",
+    "title": "Reasoning Models Chain Of Thought Controllability",
+    "discoveredAt": "2026-03-13T02:28:53.796Z"
+  },
+  {
+    "slug": "defining-and-evaluating-political-bias-in-llms",
+    "url": "https://openai.com/index/defining-and-evaluating-political-bias-in-llms/",
+    "title": "Defining and evaluating political bias in LLMs",
+    "description": "Learn how OpenAI evaluates political bias in ChatGPT through new real-world testing methods that improve objectivity and reduce bias.",
+    "image": "https://images.ctfassets.net/kftzwdyauwt9/6EXhubTc8i77O2wEh9tdyg/be8a521b0d27029559818a60dc4ae980/political-bias-in-llms-16.9.png?w=1600&h=900&fit=fill",
+    "discoveredAt": "2026-03-13T02:28:53.796Z"
+  },
+  {
+    "slug": "detecting-and-reducing-scheming-in-ai-models",
+    "url": "https://openai.com/index/detecting-and-reducing-scheming-in-ai-models/",
+    "title": "Detecting And Reducing Scheming In Ai Models",
+    "discoveredAt": "2026-03-13T02:28:53.796Z"
+  },
+  {
+    "slug": "news",
+    "url": "https://openai.com/news/",
+    "title": "News",
+    "discoveredAt": "2026-03-13T02:28:53.796Z"
+  },
+  {
+    "slug": "introducing-the-model-spec",
+    "url": "https://openai.com/index/introducing-the-model-spec/",
+    "title": "Introducing The Model Spec",
+    "discoveredAt": "2026-03-13T02:28:53.796Z"
+  },
+  {
+    "slug": "frontierscience",
+    "url": "https://openai.com/index/frontierscience/",
+    "title": "Evaluating AI’s ability to perform scientific research tasks",
+    "description": "OpenAI introduces FrontierScience, a benchmark testing AI reasoning in physics, chemistry, and biology to measure progress toward real scientific research.",
+    "image": "https://images.ctfassets.net/kftzwdyauwt9/26JX57meRpqIRJOwMtIbzv/8976180403bc44232fb6159efaf3c94d/oai_forscience_frontierscience_16x9.png?w=1600&h=900&fit=fill",
+    "discoveredAt": "2026-03-13T02:28:53.796Z"
+  },
+  {
+    "slug": "gdpval",
+    "url": "https://openai.com/index/gdpval/",
+    "title": "Gdpval",
+    "discoveredAt": "2026-03-13T02:28:53.796Z"
+  },
+  {
+    "slug": "gpt-4-1",
+    "url": "https://openai.com/index/gpt-4-1/",
+    "title": "Gpt 4 1",
+    "discoveredAt": "2026-03-13T02:28:53.796Z"
+  },
+  {
+    "slug": "evaluating-chain-of-thought-monitorability",
+    "url": "https://openai.com/index/evaluating-chain-of-thought-monitorability/",
+    "title": "Evaluating Chain Of Thought Monitorability",
+    "discoveredAt": "2026-03-13T02:28:53.796Z"
+  },
+  {
+    "slug": "accelerating-biological-research-in-the-wet-lab",
+    "url": "https://openai.com/index/accelerating-biological-research-in-the-wet-lab/",
+    "title": "Accelerating Biological Research In The Wet Lab",
+    "discoveredAt": "2026-03-13T02:28:53.796Z"
+  },
+  {
+    "slug": "introducing-indqa",
+    "url": "https://openai.com/index/introducing-indqa/",
+    "title": "Introducing Indqa",
+    "discoveredAt": "2026-03-13T02:28:53.796Z"
+  },
+  {
+    "slug": "sora-2",
+    "url": "https://openai.com/index/sora-2/",
+    "title": "Sora 2",
+    "discoveredAt": "2026-03-13T02:28:53.796Z"
+  },
+  {
+    "slug": "new-result-theoretical-physics",
+    "url": "https://openai.com/index/new-result-theoretical-physics/",
+    "title": "New Result Theoretical Physics",
+    "discoveredAt": "2026-03-13T02:28:53.796Z"
+  },
+  {
+    "slug": "extending-single-minus-amplitudes-to-gravitons",
+    "url": "https://openai.com/index/extending-single-minus-amplitudes-to-gravitons/",
+    "title": "Extending Single Minus Amplitudes To Gravitons",
+    "discoveredAt": "2026-03-13T02:28:53.796Z"
+  },
+  {
+    "slug": "gpt-5-lowers-protein-synthesis-cost",
+    "url": "https://openai.com/index/gpt-5-lowers-protein-synthesis-cost/",
+    "title": "Gpt 5 Lowers Protein Synthesis Cost",
+    "discoveredAt": "2026-03-13T02:28:53.796Z"
+  },
+  {
+    "slug": "first-proof-submissions",
+    "url": "https://openai.com/index/first-proof-submissions/",
+    "title": "First Proof Submissions",
+    "discoveredAt": "2026-03-13T02:28:53.796Z"
+  },
+  {
+    "slug": "how-people-are-using-chatgpt",
+    "url": "https://openai.com/index/how-people-are-using-chatgpt/",
+    "title": "How People Are Using Chatgpt",
+    "discoveredAt": "2026-03-13T02:28:53.796Z"
+  },
+  {
+    "slug": "introducing-evmbench",
+    "url": "https://openai.com/index/introducing-evmbench/",
+    "title": "Introducing Evmbench",
+    "discoveredAt": "2026-03-13T02:28:53.796Z"
+  },
+  {
+    "slug": "why-we-no-longer-evaluate-swe-bench-verified",
+    "url": "https://openai.com/index/why-we-no-longer-evaluate-swe-bench-verified/",
+    "title": "Why We No Longer Evaluate Swe Bench Verified",
+    "discoveredAt": "2026-03-13T02:28:53.796Z"
+  },
+  {
+    "slug": "introducing-aardvark",
+    "url": "https://openai.com/index/introducing-aardvark/",
+    "title": "Introducing Aardvark",
+    "discoveredAt": "2026-03-13T02:28:53.796Z"
+  },
+  {
+    "slug": "advancing-independent-research-ai-alignment",
+    "url": "https://openai.com/index/advancing-independent-research-ai-alignment/",
+    "title": "Advancing Independent Research Ai Alignment",
+    "discoveredAt": "2026-03-13T02:28:53.796Z"
+  },
+  {
+    "slug": "scaling-social-science-research",
+    "url": "https://openai.com/index/scaling-social-science-research/",
+    "title": "Scaling Social Science Research",
+    "discoveredAt": "2026-03-13T02:28:53.796Z"
+  },
+  {
+    "slug": "accelerating-science-gpt-5",
+    "url": "https://openai.com/index/accelerating-science-gpt-5/",
+    "title": "Accelerating Science Gpt 5",
+    "discoveredAt": "2026-03-13T02:28:53.796Z"
+  },
+  {
+    "slug": "the-state-of-enterprise-ai-2025-report",
+    "url": "https://openai.com/index/the-state-of-enterprise-ai-2025-report/",
+    "title": "The State Of Enterprise Ai 2025 Report",
+    "discoveredAt": "2026-03-13T02:28:53.796Z"
+  },
+  {
+    "slug": "evals-drive-next-chapter-of-ai",
+    "url": "https://openai.com/index/evals-drive-next-chapter-of-ai/",
+    "title": "Evals Drive Next Chapter Of Ai",
+    "discoveredAt": "2026-03-13T02:28:53.796Z"
+  },
+  {
+    "slug": "browsecomp",
+    "url": "https://openai.com/index/browsecomp/",
+    "title": "Browsecomp",
+    "discoveredAt": "2026-03-13T02:28:53.796Z"
+  },
+  {
+    "slug": "affective-use-study",
+    "url": "https://openai.com/index/affective-use-study/",
+    "title": "Affective Use Study",
+    "discoveredAt": "2026-03-13T02:28:53.796Z"
+  }
+]

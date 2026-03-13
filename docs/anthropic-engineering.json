@@ -9,20 +9,6 @@
     },
     "items": [
         {
-            "id": "https://www.anthropic.com/engineering/infrastructure-noise",
-            "url": "https://www.anthropic.com/engineering/infrastructure-noise",
-            "title": "Quantifying infrastructure noise in agentic coding evals",
-            "summary": "Infrastructure configuration can swing agentic coding benchmarks by several percentage points",
-            "date_modified": "2026-03-13T00:00:00.000Z"
-        },
-        {
-            "id": "https://www.anthropic.com/engineering/eval-awareness-browsecomp",
-            "url": "https://www.anthropic.com/engineering/eval-awareness-browsecomp",
-            "title": "Eval awareness in Claude Opus 4.6's BrowseComp performance",
-            "summary": "Cases where the model recognized test environments and accessed encrypted answers",
-            "date_modified": "2026-03-13T00:00:00.000Z"
-        },
-        {
             "id": "https://www.anthropic.com/engineering/building-c-compiler",
             "url": "https://www.anthropic.com/engineering/building-c-compiler",
             "title": "Building a C compiler with a team of parallel Claudes",
@@ -131,6 +117,20 @@
             "url": "https://www.anthropic.com/engineering/contextual-retrieval",
             "title": "Introducing Contextual Retrieval",
             "date_modified": "2024-09-19T00:00:00.000Z"
+        },
+        {
+            "id": "https://www.anthropic.com/engineering/infrastructure-noise",
+            "url": "https://www.anthropic.com/engineering/infrastructure-noise",
+            "title": "Quantifying infrastructure noise in agentic coding evals",
+            "summary": "Infrastructure configuration can swing agentic coding benchmarks by several percentage points—sometimes more than the leaderboard gap between top models.",
+            "date_modified": "2026-03-13T00:00:00.000Z"
+        },
+        {
+            "id": "https://www.anthropic.com/engineering/eval-awareness-browsecomp",
+            "url": "https://www.anthropic.com/engineering/eval-awareness-browsecomp",
+            "title": "Eval awareness in Claude Opus 4.6's BrowseComp performance",
+            "summary": "Cases where the model recognized test environments and accessed encrypted answers",
+            "date_modified": "2026-03-13T00:00:00.000Z"
         }
     ]
 }
