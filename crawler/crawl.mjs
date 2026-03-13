@@ -15,6 +15,7 @@
  */
 
 import * as cheerio from "cheerio";
+import initCycleTLS from "cycletls";
 import { readFile, writeFile } from "node:fs/promises";
 import { fileURLToPath } from "node:url";
 import { dirname, join } from "node:path";
@@ -27,26 +28,59 @@ const CONCURRENCY = 10;
 
 // --- Shared utilities ---
 
+// Chrome 131 on macOS — headers must be consistent with the TLS fingerprint
 const FETCH_HEADERS = {
   "User-Agent":
-    "Mozilla/5.0 (compatible; RSS-Feed-Crawler/1.0; +https://github.com/znck/feeds)",
-  Accept: "text/html,application/xhtml+xml,application/xml;q=0.9,*/*;q=0.8",
-  "Accept-Language": "en-US,en;q=0.5",
-  "Accept-Encoding": "gzip, deflate, br",
-  Connection: "keep-alive",
+    "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/131.0.0.0 Safari/537.36",
+  Accept: "text/html,application/xhtml+xml,application/xml;q=0.9,image/avif,image/webp,image/apng,*/*;q=0.8",
+  "Accept-Language": "en-US,en;q=0.9",
+  "Accept-Encoding": "gzip, deflate, br, zstd",
+  "Cache-Control": "max-age=0",
+  "Sec-Ch-Ua": '"Google Chrome";v="131", "Chromium";v="131", "Not_A Brand";v="24"',
+  "Sec-Ch-Ua-Mobile": "?0",
+  "Sec-Ch-Ua-Platform": '"macOS"',
+  "Sec-Fetch-Dest": "document",
+  "Sec-Fetch-Mode": "navigate",
+  "Sec-Fetch-Site": "none",
+  "Sec-Fetch-User": "?1",
+  "Upgrade-Insecure-Requests": "1",
 };
+
+// Chrome 131 JA3 fingerprint
+const CHROME_JA3 =
+  "771,4865-4866-4867-49195-49199-49196-49200-52393-52392-49171-49172-156-157-47-53,0-23-65281-10-11-35-16-5-13-18-51-45-43-27-17513-21,29-23-24,0";
+
+let cycleTLS = null;
+
+async function getCycleTLS() {
+  if (!cycleTLS) cycleTLS = await initCycleTLS();
+  return cycleTLS;
+}
+
+async function closeCycleTLS() {
+  if (cycleTLS) {
+    await cycleTLS.exit();
+    cycleTLS = null;
+  }
+}
 
 async function fetchWithRetry(url, retries = 3) {
   for (let i = 0; i <= retries; i++) {
     try {
-      const res = await fetch(url, { headers: FETCH_HEADERS, redirect: "follow" });
+      const client = await getCycleTLS();
+      const res = await client(url, {
+        body: "",
+        ja3: CHROME_JA3,
+        userAgent: FETCH_HEADERS["User-Agent"],
+        headers: FETCH_HEADERS,
+      }, "get");
       if (res.status === 403 || res.status === 429) {
         const err = new Error(`HTTP ${res.status} for ${url}`);
         err.status = res.status;
         throw err;
       }
-      if (!res.ok) throw new Error(`HTTP ${res.status} for ${url}`);
-      return await res.text();
+      if (res.status >= 400) throw new Error(`HTTP ${res.status} for ${url}`);
+      return res.body;
     } catch (err) {
       if (i === retries) throw err;
       const delay = Math.pow(2, i + 1) * 1000;
@@ -64,6 +98,8 @@ async function runInParallel(items, fn, concurrency = CONCURRENCY) {
   async function worker(id) {
     while (index < items.length) {
       if (id >= limit) return;
+      // Random jitter (200-800ms) to avoid bot-like timing patterns
+      await new Promise((r) => setTimeout(r, 200 + Math.random() * 600));
       const i = index++;
       results[i] = await fn(items[i], {
         throttle() {
@@ -331,9 +367,11 @@ async function main() {
   }
 
   await Promise.all(selected.map((config) => crawlFeed(config)));
+  await closeCycleTLS();
 }
 
-main().catch((err) => {
+main().catch(async (err) => {
   console.error("Crawl failed:", err);
+  await closeCycleTLS();
   process.exit(1);
 });
