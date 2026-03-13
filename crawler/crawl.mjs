@@ -18,7 +18,7 @@ import * as cheerio from "cheerio";
 import { readFile, writeFile } from "node:fs/promises";
 import { fileURLToPath } from "node:url";
 import { dirname, join } from "node:path";
-import { Agent, request as undiciRequest } from "undici";
+import { Agent, request as undiciRequest, interceptors } from "undici";
 import tls from "node:tls";
 
 const __dirname = dirname(fileURLToPath(import.meta.url));
@@ -43,7 +43,7 @@ const ciphers = [
 
 const tlsAgent = new Agent({
   connect: { ciphers },
-});
+}).compose(interceptors.redirect({ maxRedirections: 5 }));
 
 // Chrome-like headers — must look consistent with a real browser
 const FETCH_HEADERS = {
@@ -70,7 +70,6 @@ async function fetchWithRetry(url, retries = 3) {
         method: "GET",
         headers: FETCH_HEADERS,
         dispatcher: tlsAgent,
-        maxRedirections: 5,
       });
       const text = await body.text();
       if (statusCode === 403 || statusCode === 429) {
