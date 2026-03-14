@@ -147,7 +147,9 @@
     "slug": "why-we-no-longer-evaluate-swe-bench-verified",
     "url": "https://openai.com/index/why-we-no-longer-evaluate-swe-bench-verified/",
     "title": "Why We No Longer Evaluate Swe Bench Verified",
-    "discoveredAt": "2026-03-13T02:28:53.796Z"
+    "discoveredAt": "2026-03-13T02:28:53.796Z",
+    "description": "SWE-bench Verified is increasingly contaminated and mismeasures frontier coding progress. Our analysis shows flawed tests and training leakage. We recommend SWE-bench Pro.",
+    "image": "https://images.ctfassets.net/kftzwdyauwt9/67cdXZRtkDCZdovtRa01iv/63c2d0c7ccda4580583cc030fb366f6d/SEO_Card.png?w=1600&h=900&fit=fill"
   },
   {
     "slug": "introducing-aardvark",

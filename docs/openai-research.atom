@@ -2,7 +2,7 @@
 <feed xmlns="http://www.w3.org/2005/Atom">
     <id>https://znck.github.io/feeds/openai-research.xml</id>
     <title>OpenAI Research</title>
-    <updated>2026-03-14T12:20:02.579Z</updated>
+    <updated>2026-03-14T18:19:26.204Z</updated>
     <generator>https://github.com/jpmonette/feed</generator>
     <author>
         <name>OpenAI Research</name>
@@ -153,6 +153,7 @@
         <id>https://openai.com/index/why-we-no-longer-evaluate-swe-bench-verified/</id>
         <link href="https://openai.com/index/why-we-no-longer-evaluate-swe-bench-verified/"/>
         <updated>2026-03-13T02:28:53.796Z</updated>
+        <summary type="html"><![CDATA[SWE-bench Verified is increasingly contaminated and mismeasures frontier coding progress. Our analysis shows flawed tests and training leakage. We recommend SWE-bench Pro.]]></summary>
     </entry>
     <entry>
         <title type="html"><![CDATA[Introducing Aardvark]]></title>
