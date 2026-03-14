@@ -74,6 +74,8 @@
             "id": "https://openai.com/index/gdpval/",
             "url": "https://openai.com/index/gdpval/",
             "title": "Gdpval",
+            "summary": "OpenAI introduces GDPval, a new evaluation that measures model performance on real-world economically valuable tasks across 44 occupations.",
+            "image": "https://images.ctfassets.net/kftzwdyauwt9/65D5lQ6o5VqRjLuebLijXO/63db445c96aa2ec29d5a4e76fe20169d/GDPval__Art_Card.png?w=1600&h=900&fit=fill",
             "date_modified": "2026-03-13T02:28:53.796Z"
         },
         {
@@ -104,6 +106,8 @@
             "id": "https://openai.com/index/sora-2/",
             "url": "https://openai.com/index/sora-2/",
             "title": "Sora 2",
+            "summary": "Our latest video generation model is more physically accurate, realistic, and controllable than prior systems. It also features synchronized dialogue and sound effects. Create with it in the new Sora app.",
+            "image": "https://images.ctfassets.net/kftzwdyauwt9/1Q8NDmnyavsoPAKDlWpW18/a1f595376097668d1772c9cac40fc8ee/16_x_9____1_.png?w=1600&h=900&fit=fill",
             "date_modified": "2026-03-13T02:28:53.796Z"
         },
         {
@@ -128,6 +132,8 @@
             "id": "https://openai.com/index/first-proof-submissions/",
             "url": "https://openai.com/index/first-proof-submissions/",
             "title": "First Proof Submissions",
+            "summary": "We share our AI model’s proof attempts for the First Proof math challenge, testing research-grade reasoning on expert-level problems.",
+            "image": "https://images.ctfassets.net/kftzwdyauwt9/5bEu8lJDIhSisHkrCQwQ0l/84b53efb35f70a50a111d71613a1c3de/oai_Science_First_Proof_SEO_Open_Graph_16x9.png?w=1600&h=900&fit=fill",
             "date_modified": "2026-03-13T02:28:53.796Z"
         },
         {

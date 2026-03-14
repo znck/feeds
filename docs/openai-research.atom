@@ -2,7 +2,7 @@
 <feed xmlns="http://www.w3.org/2005/Atom">
     <id>https://znck.github.io/feeds/openai-research.xml</id>
     <title>OpenAI Research</title>
-    <updated>2026-03-13T18:26:17.884Z</updated>
+    <updated>2026-03-14T00:42:36.742Z</updated>
     <generator>https://github.com/jpmonette/feed</generator>
     <author>
         <name>OpenAI Research</name>
@@ -76,6 +76,7 @@
         <id>https://openai.com/index/gdpval/</id>
         <link href="https://openai.com/index/gdpval/"/>
         <updated>2026-03-13T02:28:53.796Z</updated>
+        <summary type="html"><![CDATA[OpenAI introduces GDPval, a new evaluation that measures model performance on real-world economically valuable tasks across 44 occupations.]]></summary>
     </entry>
     <entry>
         <title type="html"><![CDATA[Gpt 4 1]]></title>
@@ -106,6 +107,7 @@
         <id>https://openai.com/index/sora-2/</id>
         <link href="https://openai.com/index/sora-2/"/>
         <updated>2026-03-13T02:28:53.796Z</updated>
+        <summary type="html"><![CDATA[Our latest video generation model is more physically accurate, realistic, and controllable than prior systems. It also features synchronized dialogue and sound effects. Create with it in the new Sora app.]]></summary>
     </entry>
     <entry>
         <title type="html"><![CDATA[New Result Theoretical Physics]]></title>
@@ -130,6 +132,7 @@
         <id>https://openai.com/index/first-proof-submissions/</id>
         <link href="https://openai.com/index/first-proof-submissions/"/>
         <updated>2026-03-13T02:28:53.796Z</updated>
+        <summary type="html"><![CDATA[We share our AI model’s proof attempts for the First Proof math challenge, testing research-grade reasoning on expert-level problems.]]></summary>
     </entry>
     <entry>
         <title type="html"><![CDATA[How People Are Using Chatgpt]]></title>
