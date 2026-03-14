@@ -2,7 +2,7 @@
 <feed xmlns="http://www.w3.org/2005/Atom">
     <id>https://znck.github.io/feeds/openai-research.xml</id>
     <title>OpenAI Research</title>
-    <updated>2026-03-14T06:28:22.536Z</updated>
+    <updated>2026-03-14T12:20:02.579Z</updated>
     <generator>https://github.com/jpmonette/feed</generator>
     <author>
         <name>OpenAI Research</name>
@@ -44,6 +44,7 @@
         <id>https://openai.com/index/reasoning-models-chain-of-thought-controllability/</id>
         <link href="https://openai.com/index/reasoning-models-chain-of-thought-controllability/"/>
         <updated>2026-03-13T02:28:53.796Z</updated>
+        <summary type="html"><![CDATA[OpenAI introduces CoT-Control and finds reasoning models struggle to control their chains of thought, reinforcing monitorability as an AI safety safeguard.]]></summary>
     </entry>
     <entry>
         <title type="html"><![CDATA[Defining and evaluating political bias in LLMs]]></title>
@@ -120,6 +121,7 @@
         <id>https://openai.com/index/extending-single-minus-amplitudes-to-gravitons/</id>
         <link href="https://openai.com/index/extending-single-minus-amplitudes-to-gravitons/"/>
         <updated>2026-03-13T02:28:53.796Z</updated>
+        <summary type="html"><![CDATA[A new preprint extends single-minus amplitudes to gravitons, with GPT-5.2 Pro helping derive and verify nonzero graviton tree amplitudes in quantum gravity.]]></summary>
     </entry>
     <entry>
         <title type="html"><![CDATA[Gpt 5 Lowers Protein Synthesis Cost]]></title>
@@ -157,6 +159,7 @@
         <id>https://openai.com/index/introducing-aardvark/</id>
         <link href="https://openai.com/index/introducing-aardvark/"/>
         <updated>2026-03-13T02:28:53.796Z</updated>
+        <summary type="html"><![CDATA[OpenAI introduces Aardvark, an AI-powered security researcher that autonomously finds, validates, and helps fix software vulnerabilities at scale. The system is in private beta—sign up to join early testing.]]></summary>
     </entry>
     <entry>
         <title type="html"><![CDATA[Advancing Independent Research Ai Alignment]]></title>
