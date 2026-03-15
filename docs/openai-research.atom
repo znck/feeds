@@ -2,7 +2,7 @@
 <feed xmlns="http://www.w3.org/2005/Atom">
     <id>https://znck.github.io/feeds/openai-research.xml</id>
     <title>OpenAI Research</title>
-    <updated>2026-03-14T18:19:26.204Z</updated>
+    <updated>2026-03-15T00:51:03.867Z</updated>
     <generator>https://github.com/jpmonette/feed</generator>
     <author>
         <name>OpenAI Research</name>
@@ -58,6 +58,7 @@
         <id>https://openai.com/index/detecting-and-reducing-scheming-in-ai-models/</id>
         <link href="https://openai.com/index/detecting-and-reducing-scheming-in-ai-models/"/>
         <updated>2026-03-13T02:28:53.796Z</updated>
+        <summary type="html"><![CDATA[Apollo Research and OpenAI developed evaluations for hidden misalignment (“scheming”) and found behaviors consistent with scheming in controlled tests across frontier models. The team shared concrete examples and stress tests of an early method to reduce scheming. ]]></summary>
     </entry>
     <entry>
         <title type="html"><![CDATA[Introducing The Model Spec]]></title>
@@ -167,6 +168,7 @@
         <id>https://openai.com/index/advancing-independent-research-ai-alignment/</id>
         <link href="https://openai.com/index/advancing-independent-research-ai-alignment/"/>
         <updated>2026-03-13T02:28:53.796Z</updated>
+        <summary type="html"><![CDATA[OpenAI commits $7.5M to The Alignment Project to fund independent AI alignment research, strengthening global efforts to address AGI safety and security risks.]]></summary>
     </entry>
     <entry>
         <title type="html"><![CDATA[Scaling Social Science Research]]></title>

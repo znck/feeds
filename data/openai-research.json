@@ -47,7 +47,9 @@
     "slug": "detecting-and-reducing-scheming-in-ai-models",
     "url": "https://openai.com/index/detecting-and-reducing-scheming-in-ai-models/",
     "title": "Detecting And Reducing Scheming In Ai Models",
-    "discoveredAt": "2026-03-13T02:28:53.796Z"
+    "discoveredAt": "2026-03-13T02:28:53.796Z",
+    "description": "Apollo Research and OpenAI developed evaluations for hidden misalignment (“scheming”) and found behaviors consistent with scheming in controlled tests across frontier models. The team shared concrete examples and stress tests of an early method to reduce scheming. ",
+    "image": "https://images.ctfassets.net/kftzwdyauwt9/5lYGYuDin762rL93Pdz2Bx/341a3aaca604f4244df7b9ce3b0cc91f/Anti-Scheming_Cover.png?w=1600&h=900&fit=fill"
   },
   {
     "slug": "introducing-the-model-spec",
@@ -163,7 +165,9 @@
     "slug": "advancing-independent-research-ai-alignment",
     "url": "https://openai.com/index/advancing-independent-research-ai-alignment/",
     "title": "Advancing Independent Research Ai Alignment",
-    "discoveredAt": "2026-03-13T02:28:53.796Z"
+    "discoveredAt": "2026-03-13T02:28:53.796Z",
+    "description": "OpenAI commits $7.5M to The Alignment Project to fund independent AI alignment research, strengthening global efforts to address AGI safety and security risks.",
+    "image": "https://images.ctfassets.net/kftzwdyauwt9/41XPFki1MAJlOqfx50Lr9n/8e7423403b90a3d12e4d3844d83a77dd/SEO_Card__1_.png?w=1600&h=900&fit=fill"
   },
   {
     "slug": "scaling-social-science-research",
