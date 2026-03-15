@@ -2,7 +2,7 @@
 <feed xmlns="http://www.w3.org/2005/Atom">
     <id>https://znck.github.io/feeds/openai-research.xml</id>
     <title>OpenAI Research</title>
-    <updated>2026-03-15T00:51:03.867Z</updated>
+    <updated>2026-03-15T06:33:19.157Z</updated>
     <generator>https://github.com/jpmonette/feed</generator>
     <author>
         <name>OpenAI Research</name>
@@ -205,5 +205,6 @@
         <id>https://openai.com/index/affective-use-study/</id>
         <link href="https://openai.com/index/affective-use-study/"/>
         <updated>2026-03-13T02:28:53.796Z</updated>
+        <summary type="html"><![CDATA[An OpenAI and MIT Media Lab Research collaboration.]]></summary>
     </entry>
 </feed>
