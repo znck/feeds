@@ -55,7 +55,8 @@
     "slug": "introducing-the-model-spec",
     "url": "https://openai.com/index/introducing-the-model-spec/",
     "title": "Introducing The Model Spec",
-    "discoveredAt": "2026-03-13T02:28:53.796Z"
+    "discoveredAt": "2026-03-13T02:28:53.796Z",
+    "image": "https://images.ctfassets.net/kftzwdyauwt9/2oOdYlEm4NHQCiqTsStMuD/ffe7260fb16cac11a570313b78cec8b8/DALL_E_2024-05-06_19.10.23.webp?w=1600&h=900&fit=fill"
   },
   {
     "slug": "frontierscience",
@@ -77,7 +78,9 @@
     "slug": "gpt-4-1",
     "url": "https://openai.com/index/gpt-4-1/",
     "title": "Gpt 4 1",
-    "discoveredAt": "2026-03-13T02:28:53.796Z"
+    "discoveredAt": "2026-03-13T02:28:53.796Z",
+    "description": "Introducing GPT-4.1 in the API—a new family of models with across-the-board improvements, including major gains in coding, instruction following, and long-context understanding. We’re also releasing our first nano model. Available to developers worldwide starting today.",
+    "image": "https://images.ctfassets.net/kftzwdyauwt9/2C5yfJCw3N5tzKg8ZtBpw0/bcbc7022f43bca374a75dbc4a65937ef/API_GPT-4.1_Art_16.9.png?w=1600&h=900&fit=fill"
   },
   {
     "slug": "evaluating-chain-of-thought-monitorability",
@@ -97,7 +100,9 @@
     "slug": "introducing-indqa",
     "url": "https://openai.com/index/introducing-indqa/",
     "title": "Introducing Indqa",
-    "discoveredAt": "2026-03-13T02:28:53.796Z"
+    "discoveredAt": "2026-03-13T02:28:53.796Z",
+    "description": "OpenAI introduces IndQA, a new benchmark for evaluating AI systems in Indian languages. Built with domain experts, IndQA tests cultural understanding and reasoning across 12 languages and 10 knowledge areas.",
+    "image": "https://images.ctfassets.net/kftzwdyauwt9/5RrMpGwZVvEFy6d02cXoOq/4891d9b5c952037c97d20041acd9675f/oai_IndQA_16.9.png?w=1600&h=900&fit=fill"
   },
   {
     "slug": "sora-2",
@@ -139,7 +144,9 @@
     "slug": "how-people-are-using-chatgpt",
     "url": "https://openai.com/index/how-people-are-using-chatgpt/",
     "title": "How People Are Using Chatgpt",
-    "discoveredAt": "2026-03-13T02:28:53.796Z"
+    "discoveredAt": "2026-03-13T02:28:53.796Z",
+    "description": "New research from the largest study of ChatGPT use shows how the tool creates economic value through both personal and professional use. Adoption is broadening beyond early users, closing gaps and making AI a part of everyday life.",
+    "image": "https://images.ctfassets.net/kftzwdyauwt9/2khdUJJKQqjmai3Lv9PeOK/f8e084232f90b0278b0466d9f144bfbb/how-people-are-using-chatgpt-16.9.png?w=1600&h=900&fit=fill"
   },
   {
     "slug": "introducing-evmbench",

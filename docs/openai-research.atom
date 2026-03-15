@@ -2,7 +2,7 @@
 <feed xmlns="http://www.w3.org/2005/Atom">
     <id>https://znck.github.io/feeds/openai-research.xml</id>
     <title>OpenAI Research</title>
-    <updated>2026-03-15T12:22:26.029Z</updated>
+    <updated>2026-03-15T18:19:26.823Z</updated>
     <generator>https://github.com/jpmonette/feed</generator>
     <author>
         <name>OpenAI Research</name>
@@ -85,6 +85,7 @@
         <id>https://openai.com/index/gpt-4-1/</id>
         <link href="https://openai.com/index/gpt-4-1/"/>
         <updated>2026-03-13T02:28:53.796Z</updated>
+        <summary type="html"><![CDATA[Introducing GPT-4.1 in the API—a new family of models with across-the-board improvements, including major gains in coding, instruction following, and long-context understanding. We’re also releasing our first nano model. Available to developers worldwide starting today.]]></summary>
     </entry>
     <entry>
         <title type="html"><![CDATA[Evaluating Chain Of Thought Monitorability]]></title>
@@ -104,6 +105,7 @@
         <id>https://openai.com/index/introducing-indqa/</id>
         <link href="https://openai.com/index/introducing-indqa/"/>
         <updated>2026-03-13T02:28:53.796Z</updated>
+        <summary type="html"><![CDATA[OpenAI introduces IndQA, a new benchmark for evaluating AI systems in Indian languages. Built with domain experts, IndQA tests cultural understanding and reasoning across 12 languages and 10 knowledge areas.]]></summary>
     </entry>
     <entry>
         <title type="html"><![CDATA[Sora 2]]></title>
@@ -143,6 +145,7 @@
         <id>https://openai.com/index/how-people-are-using-chatgpt/</id>
         <link href="https://openai.com/index/how-people-are-using-chatgpt/"/>
         <updated>2026-03-13T02:28:53.796Z</updated>
+        <summary type="html"><![CDATA[New research from the largest study of ChatGPT use shows how the tool creates economic value through both personal and professional use. Adoption is broadening beyond early users, closing gaps and making AI a part of everyday life.]]></summary>
     </entry>
     <entry>
         <title type="html"><![CDATA[Introducing Evmbench]]></title>
