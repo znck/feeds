@@ -2,7 +2,7 @@
 <feed xmlns="http://www.w3.org/2005/Atom">
     <id>https://znck.github.io/feeds/openai-research.xml</id>
     <title>OpenAI Research</title>
-    <updated>2026-03-15T06:33:19.157Z</updated>
+    <updated>2026-03-15T12:22:26.029Z</updated>
     <generator>https://github.com/jpmonette/feed</generator>
     <author>
         <name>OpenAI Research</name>
@@ -91,6 +91,7 @@
         <id>https://openai.com/index/evaluating-chain-of-thought-monitorability/</id>
         <link href="https://openai.com/index/evaluating-chain-of-thought-monitorability/"/>
         <updated>2026-03-13T02:28:53.796Z</updated>
+        <summary type="html"><![CDATA[OpenAI introduces a new framework and evaluation suite for chain-of-thought monitorability, covering 13 evaluations across 24 environments. Our findings show that monitoring a model’s internal reasoning is far more effective than monitoring outputs alone, offering a promising path toward scalable control as AI systems grow more capable.]]></summary>
     </entry>
     <entry>
         <title type="html"><![CDATA[Accelerating Biological Research In The Wet Lab]]></title>
