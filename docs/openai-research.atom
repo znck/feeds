@@ -2,7 +2,7 @@
 <feed xmlns="http://www.w3.org/2005/Atom">
     <id>https://znck.github.io/feeds/openai-research.xml</id>
     <title>OpenAI Research</title>
-    <updated>2026-03-15T18:19:26.823Z</updated>
+    <updated>2026-03-16T00:45:00.359Z</updated>
     <generator>https://github.com/jpmonette/feed</generator>
     <author>
         <name>OpenAI Research</name>
@@ -18,6 +18,7 @@
         <id>https://openai.com/index/understanding-neural-networks-through-sparse-circuits/</id>
         <link href="https://openai.com/index/understanding-neural-networks-through-sparse-circuits/"/>
         <updated>2026-03-13T02:28:53.795Z</updated>
+        <summary type="html"><![CDATA[OpenAI is exploring mechanistic interpretability to understand how neural networks reason. Our new sparse model approach could make AI systems more transparent and support safer, more reliable behavior.]]></summary>
     </entry>
     <entry>
         <title type="html"><![CDATA[Improving instruction hierarchy in frontier LLMs]]></title>
@@ -31,6 +32,7 @@
         <id>https://openai.com/index/how-confessions-can-keep-language-models-honest/</id>
         <link href="https://openai.com/index/how-confessions-can-keep-language-models-honest/"/>
         <updated>2026-03-13T02:28:53.796Z</updated>
+        <summary type="html"><![CDATA[OpenAI researchers are testing “confessions,” a method that trains models to admit when they make mistakes or act undesirably, helping improve AI honesty, transparency, and trust in model outputs.]]></summary>
     </entry>
     <entry>
         <title type="html"><![CDATA[Why language models hallucinate]]></title>
@@ -99,6 +101,7 @@
         <id>https://openai.com/index/accelerating-biological-research-in-the-wet-lab/</id>
         <link href="https://openai.com/index/accelerating-biological-research-in-the-wet-lab/"/>
         <updated>2026-03-13T02:28:53.796Z</updated>
+        <summary type="html"><![CDATA[OpenAI introduces a real-world evaluation framework to measure how AI can accelerate biological research in the wet lab. Using GPT-5 to optimize a molecular cloning protocol, the work explores both the promise and risks of AI-assisted experimentation.]]></summary>
     </entry>
     <entry>
         <title type="html"><![CDATA[Introducing Indqa]]></title>
@@ -119,6 +122,7 @@
         <id>https://openai.com/index/new-result-theoretical-physics/</id>
         <link href="https://openai.com/index/new-result-theoretical-physics/"/>
         <updated>2026-03-13T02:28:53.796Z</updated>
+        <summary type="html"><![CDATA[A new preprint shows GPT-5.2 proposing a new formula for a gluon amplitude, later formally proved and verified by OpenAI and academic collaborators.]]></summary>
     </entry>
     <entry>
         <title type="html"><![CDATA[Extending Single Minus Amplitudes To Gravitons]]></title>
@@ -132,6 +136,7 @@
         <id>https://openai.com/index/gpt-5-lowers-protein-synthesis-cost/</id>
         <link href="https://openai.com/index/gpt-5-lowers-protein-synthesis-cost/"/>
         <updated>2026-03-13T02:28:53.796Z</updated>
+        <summary type="html"><![CDATA[An autonomous lab combining OpenAI’s GPT-5 with Ginkgo Bioworks’ cloud automation cut cell-free protein synthesis costs by 40% through closed-loop experimentation.]]></summary>
     </entry>
     <entry>
         <title type="html"><![CDATA[First Proof Submissions]]></title>
@@ -152,6 +157,7 @@
         <id>https://openai.com/index/introducing-evmbench/</id>
         <link href="https://openai.com/index/introducing-evmbench/"/>
         <updated>2026-03-13T02:28:53.796Z</updated>
+        <summary type="html"><![CDATA[OpenAI and Paradigm introduce EVMbench, a benchmark evaluating AI agents’ ability to detect, patch, and exploit high-severity smart contract vulnerabilities.]]></summary>
     </entry>
     <entry>
         <title type="html"><![CDATA[Why We No Longer Evaluate Swe Bench Verified]]></title>
@@ -179,30 +185,35 @@
         <id>https://openai.com/index/scaling-social-science-research/</id>
         <link href="https://openai.com/index/scaling-social-science-research/"/>
         <updated>2026-03-13T02:28:53.796Z</updated>
+        <summary type="html"><![CDATA[GABRIEL is a new open-source toolkit from OpenAI that uses GPT to turn qualitative text and images into quantitative data, helping social scientists analyze research at scale.]]></summary>
     </entry>
     <entry>
         <title type="html"><![CDATA[Accelerating Science Gpt 5]]></title>
         <id>https://openai.com/index/accelerating-science-gpt-5/</id>
         <link href="https://openai.com/index/accelerating-science-gpt-5/"/>
         <updated>2026-03-13T02:28:53.796Z</updated>
+        <summary type="html"><![CDATA[OpenAI introduces the first research cases showing how GPT-5 accelerates scientific progress across math, physics, biology, and computer science. Explore how AI and researchers collaborate to generate proofs, uncover new insights, and reshape the pace of discovery.]]></summary>
     </entry>
     <entry>
         <title type="html"><![CDATA[The State Of Enterprise Ai 2025 Report]]></title>
         <id>https://openai.com/index/the-state-of-enterprise-ai-2025-report/</id>
         <link href="https://openai.com/index/the-state-of-enterprise-ai-2025-report/"/>
         <updated>2026-03-13T02:28:53.796Z</updated>
+        <summary type="html"><![CDATA[Key findings from OpenAI’s enterprise data show accelerating AI adoption, deeper integration, and measurable productivity gains across industries in 2025.]]></summary>
     </entry>
     <entry>
         <title type="html"><![CDATA[Evals Drive Next Chapter Of Ai]]></title>
         <id>https://openai.com/index/evals-drive-next-chapter-of-ai/</id>
         <link href="https://openai.com/index/evals-drive-next-chapter-of-ai/"/>
         <updated>2026-03-13T02:28:53.796Z</updated>
+        <summary type="html"><![CDATA[Learn how evals help businesses define, measure, and improve AI performance—reducing risk, boosting productivity, and driving strategic advantage.]]></summary>
     </entry>
     <entry>
         <title type="html"><![CDATA[Browsecomp]]></title>
         <id>https://openai.com/index/browsecomp/</id>
         <link href="https://openai.com/index/browsecomp/"/>
         <updated>2026-03-13T02:28:53.796Z</updated>
+        <summary type="html"><![CDATA[BrowseComp: a benchmark for browsing agents.]]></summary>
     </entry>
     <entry>
         <title type="html"><![CDATA[Affective Use Study]]></title>
