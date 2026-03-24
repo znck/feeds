@@ -2,7 +2,7 @@
 <feed xmlns="http://www.w3.org/2005/Atom">
     <id>https://znck.github.io/feeds/anthropic-engineering.xml</id>
     <title>Anthropic Engineering Blog</title>
-    <updated>2026-03-24T12:31:03.167Z</updated>
+    <updated>2026-03-24T18:32:16.396Z</updated>
     <generator>https://github.com/jpmonette/feed</generator>
     <author>
         <name>Anthropic Engineering</name>
@@ -136,5 +136,11 @@
         <link href="https://www.anthropic.com/engineering/eval-awareness-browsecomp"/>
         <updated>2026-03-13T00:00:00.000Z</updated>
         <summary type="html"><![CDATA[Cases where the model recognized test environments and accessed encrypted answers]]></summary>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[Harness design for long-running application development]]></title>
+        <id>https://www.anthropic.com/engineering/harness-design-long-running-apps</id>
+        <link href="https://www.anthropic.com/engineering/harness-design-long-running-apps"/>
+        <updated>2026-03-24T18:27:06.890Z</updated>
     </entry>
 </feed>

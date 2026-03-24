@@ -131,6 +131,12 @@
             "title": "Eval awareness in Claude Opus 4.6's BrowseComp performance",
             "summary": "Cases where the model recognized test environments and accessed encrypted answers",
             "date_modified": "2026-03-13T00:00:00.000Z"
+        },
+        {
+            "id": "https://www.anthropic.com/engineering/harness-design-long-running-apps",
+            "url": "https://www.anthropic.com/engineering/harness-design-long-running-apps",
+            "title": "Harness design for long-running application development",
+            "date_modified": "2026-03-24T18:27:06.890Z"
         }
     ]
 }
