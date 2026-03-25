@@ -237,5 +237,11 @@
     "discoveredAt": "2026-03-13T02:28:53.796Z",
     "description": "An OpenAI and MIT Media Lab Research collaboration.",
     "image": "https://downloads.ctfassets.net/kftzwdyauwt9/4RNiq6LSdkrzeESGCSFkil/0350a02a60eb1f716caa5609b1cae02c/OAI_Affective_Use_16.9.jpg?w=1600&h=900&fit=fill"
+  },
+  {
+    "slug": "our-approach-to-the-model-spec",
+    "url": "https://openai.com/index/our-approach-to-the-model-spec/",
+    "title": "Our Approach To The Model Spec",
+    "discoveredAt": "2026-03-25T18:32:25.766Z"
   }
 ]
