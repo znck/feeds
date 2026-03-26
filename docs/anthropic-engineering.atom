@@ -2,7 +2,7 @@
 <feed xmlns="http://www.w3.org/2005/Atom">
     <id>https://znck.github.io/feeds/anthropic-engineering.xml</id>
     <title>Anthropic Engineering Blog</title>
-    <updated>2026-03-25T18:32:25.933Z</updated>
+    <updated>2026-03-26T00:49:44.154Z</updated>
     <generator>https://github.com/jpmonette/feed</generator>
     <author>
         <name>Anthropic Engineering</name>
@@ -142,5 +142,11 @@
         <id>https://www.anthropic.com/engineering/harness-design-long-running-apps</id>
         <link href="https://www.anthropic.com/engineering/harness-design-long-running-apps"/>
         <updated>2026-03-24T18:27:06.890Z</updated>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[Claude Code auto mode: a safer way to skip permissions]]></title>
+        <id>https://www.anthropic.com/engineering/claude-code-auto-mode</id>
+        <link href="https://www.anthropic.com/engineering/claude-code-auto-mode"/>
+        <updated>2026-03-26T00:43:37.690Z</updated>
     </entry>
 </feed>
