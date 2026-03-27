@@ -242,6 +242,8 @@
     "slug": "our-approach-to-the-model-spec",
     "url": "https://openai.com/index/our-approach-to-the-model-spec/",
     "title": "Our Approach To The Model Spec",
-    "discoveredAt": "2026-03-25T18:32:25.766Z"
+    "discoveredAt": "2026-03-25T18:32:25.766Z",
+    "description": "Learn how OpenAI’s Model Spec serves as a public framework for model behavior, balancing safety, user freedom, and accountability as AI systems advance.",
+    "image": "https://images.ctfassets.net/kftzwdyauwt9/35bHEbm0rP6Pp4Vz11SaVW/1033fdf6bbcac970107c7503b38ddeba/oai_model_spec_16x9.png?w=1600&h=900&fit=fill"
   }
 ]
