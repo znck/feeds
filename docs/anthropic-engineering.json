@@ -143,6 +143,12 @@
             "url": "https://www.anthropic.com/engineering/claude-code-auto-mode",
             "title": "Claude Code auto mode: a safer way to skip permissions",
             "date_modified": "2026-03-26T00:43:37.690Z"
+        },
+        {
+            "id": "https://www.anthropic.com/engineering/managed-agents",
+            "url": "https://www.anthropic.com/engineering/managed-agents",
+            "title": "Scaling Managed Agents: Decoupling the brain from the hands",
+            "date_modified": "2026-04-08T18:34:00.364Z"
         }
     ]
 }

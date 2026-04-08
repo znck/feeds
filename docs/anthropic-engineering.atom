@@ -2,7 +2,7 @@
 <feed xmlns="http://www.w3.org/2005/Atom">
     <id>https://znck.github.io/feeds/anthropic-engineering.xml</id>
     <title>Anthropic Engineering Blog</title>
-    <updated>2026-04-08T12:31:58.076Z</updated>
+    <updated>2026-04-08T18:40:07.743Z</updated>
     <generator>https://github.com/jpmonette/feed</generator>
     <author>
         <name>Anthropic Engineering</name>
@@ -148,5 +148,11 @@
         <id>https://www.anthropic.com/engineering/claude-code-auto-mode</id>
         <link href="https://www.anthropic.com/engineering/claude-code-auto-mode"/>
         <updated>2026-03-26T00:43:37.690Z</updated>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[Scaling Managed Agents: Decoupling the brain from the hands]]></title>
+        <id>https://www.anthropic.com/engineering/managed-agents</id>
+        <link href="https://www.anthropic.com/engineering/managed-agents"/>
+        <updated>2026-04-08T18:34:00.364Z</updated>
     </entry>
 </feed>
