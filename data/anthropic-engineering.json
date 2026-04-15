@@ -169,5 +169,12 @@
     "title": "Scaling Managed Agents: Decoupling the brain from the hands",
     "description": "",
     "discoveredAt": "2026-04-08T18:34:00.364Z"
+  },
+  {
+    "slug": "equipping-agents-for-the-real-world-with-agent-skills",
+    "url": "https://www.anthropic.com/engineering/equipping-agents-for-the-real-world-with-agent-skills",
+    "title": "Equipping agents for the real world with Agent Skills",
+    "description": "",
+    "discoveredAt": "2026-04-15T18:35:44.115Z"
   }
 ]
