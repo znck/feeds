@@ -2,7 +2,7 @@
 <feed xmlns="http://www.w3.org/2005/Atom">
     <id>https://znck.github.io/feeds/openai-research.xml</id>
     <title>OpenAI Research</title>
-    <updated>2026-04-17T00:52:46.556Z</updated>
+    <updated>2026-04-17T06:47:02.616Z</updated>
     <generator>https://github.com/jpmonette/feed</generator>
     <author>
         <name>OpenAI Research</name>
@@ -234,5 +234,6 @@
         <id>https://openai.com/index/introducing-gpt-rosalind/</id>
         <link href="https://openai.com/index/introducing-gpt-rosalind/"/>
         <updated>2026-04-17T00:52:46.415Z</updated>
+        <summary type="html"><![CDATA[OpenAI introduces GPT-Rosalind, a frontier reasoning model built to accelerate drug discovery, genomics analysis, protein reasoning, and scientific research workflows.]]></summary>
     </entry>
 </feed>
