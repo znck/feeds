@@ -2,7 +2,7 @@
 <feed xmlns="http://www.w3.org/2005/Atom">
     <id>https://znck.github.io/feeds/openai-research.xml</id>
     <title>OpenAI Research</title>
-    <updated>2026-04-16T18:33:23.999Z</updated>
+    <updated>2026-04-17T00:52:46.556Z</updated>
     <generator>https://github.com/jpmonette/feed</generator>
     <author>
         <name>OpenAI Research</name>
@@ -228,5 +228,11 @@
         <link href="https://openai.com/index/our-approach-to-the-model-spec/"/>
         <updated>2026-03-25T18:32:25.766Z</updated>
         <summary type="html"><![CDATA[Learn how OpenAI’s Model Spec serves as a public framework for model behavior, balancing safety, user freedom, and accountability as AI systems advance.]]></summary>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[Introducing Gpt Rosalind]]></title>
+        <id>https://openai.com/index/introducing-gpt-rosalind/</id>
+        <link href="https://openai.com/index/introducing-gpt-rosalind/"/>
+        <updated>2026-04-17T00:52:46.415Z</updated>
     </entry>
 </feed>
