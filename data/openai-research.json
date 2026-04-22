@@ -253,5 +253,13 @@
     "discoveredAt": "2026-04-17T00:52:46.415Z",
     "description": "OpenAI introduces GPT-Rosalind, a frontier reasoning model built to accelerate drug discovery, genomics analysis, protein reasoning, and scientific research workflows.",
     "image": "https://images.ctfassets.net/kftzwdyauwt9/47Nrk4vhqfDQphKzpWC3Ha/42dcbf0138bdf0e4fe78196319bccb79/OAI_GPT-Rosaling_SEO_16x9_Alt.png?w=1600&h=900&fit=fill"
+  },
+  {
+    "slug": "introducing-openai-privacy-filter",
+    "url": "https://openai.com/index/introducing-openai-privacy-filter/",
+    "title": "Introducing OpenAI Privacy Filter",
+    "description": "OpenAI Privacy Filter is an open-weight model for detecting and redacting personally identifiable information (PII) in text with state-of-the-art accuracy",
+    "image": "https://images.ctfassets.net/kftzwdyauwt9/9wR7uKQ9cCyJSZcN9PJCb/c42551ed6a31a9be9ada24fed80a862a/SEO-Introducing-OpenAi-Filter.png?w=1600&h=900&fit=fill",
+    "discoveredAt": "2026-04-22T18:31:02.931Z"
   }
 ]
