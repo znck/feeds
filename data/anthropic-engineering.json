@@ -176,5 +176,12 @@
     "title": "Equipping agents for the real world with Agent Skills",
     "description": "",
     "discoveredAt": "2026-04-15T18:35:44.115Z"
+  },
+  {
+    "slug": "april-23-postmortem",
+    "url": "https://www.anthropic.com/engineering/april-23-postmortem",
+    "title": "An update on recent Claude Code quality reports",
+    "description": "",
+    "discoveredAt": "2026-04-23T18:32:49.441Z"
   }
 ]
