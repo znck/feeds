@@ -160,6 +160,7 @@
             "id": "https://www.anthropic.com/engineering/april-23-postmortem",
             "url": "https://www.anthropic.com/engineering/april-23-postmortem",
             "title": "An update on recent Claude Code quality reports",
+            "summary": "We traced recent reports of Claude Code quality issues to three separate changes. Here's what happened and what we're changing.",
             "date_modified": "2026-04-23T18:32:49.441Z"
         }
     ]
