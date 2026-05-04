@@ -2,7 +2,7 @@
 <feed xmlns="http://www.w3.org/2005/Atom">
     <id>https://znck.github.io/feeds/anthropic-engineering.xml</id>
     <title>Anthropic Engineering Blog</title>
-    <updated>2026-05-04T00:59:32.748Z</updated>
+    <updated>2026-05-04T07:16:13.823Z</updated>
     <generator>https://github.com/jpmonette/feed</generator>
     <author>
         <name>Anthropic Engineering</name>
@@ -135,7 +135,7 @@
         <id>https://www.anthropic.com/engineering/eval-awareness-browsecomp</id>
         <link href="https://www.anthropic.com/engineering/eval-awareness-browsecomp"/>
         <updated>2026-03-13T00:00:00.000Z</updated>
-        <summary type="html"><![CDATA[Cases where the model recognized test environments and accessed encrypted answers]]></summary>
+        <summary type="html"><![CDATA[Anthropic is an AI safety and research company that's working to build reliable, interpretable, and steerable AI systems.]]></summary>
     </entry>
     <entry>
         <title type="html"><![CDATA[Harness design for long-running application development]]></title>

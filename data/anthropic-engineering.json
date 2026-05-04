@@ -140,14 +140,16 @@
     "url": "https://www.anthropic.com/engineering/infrastructure-noise",
     "title": "Quantifying infrastructure noise in agentic coding evals",
     "description": "Infrastructure configuration can swing agentic coding benchmarks by several percentage points—sometimes more than the leaderboard gap between top models.",
-    "discoveredAt": "2026-03-13T00:00:00.000Z"
+    "discoveredAt": "2026-03-13T00:00:00.000Z",
+    "image": "https://cdn.sanity.io/images/4zrzovbb/website/16ff27ee039d98cf3391433f6f3df23aa96b1e91-2400x1260.png"
   },
   {
     "slug": "eval-awareness-browsecomp",
     "url": "https://www.anthropic.com/engineering/eval-awareness-browsecomp",
     "title": "Eval awareness in Claude Opus 4.6's BrowseComp performance",
-    "description": "Cases where the model recognized test environments and accessed encrypted answers",
-    "discoveredAt": "2026-03-13T00:00:00.000Z"
+    "description": "Anthropic is an AI safety and research company that's working to build reliable, interpretable, and steerable AI systems.",
+    "discoveredAt": "2026-03-13T00:00:00.000Z",
+    "image": "https://cdn.sanity.io/images/4zrzovbb/website/82d2262129af025d98a46411fbd42ee970a95cb4-2400x1260.heif"
   },
   {
     "slug": "harness-design-long-running-apps",
