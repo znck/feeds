@@ -261,5 +261,13 @@
     "description": "OpenAI Privacy Filter is an open-weight model for detecting and redacting personally identifiable information (PII) in text with state-of-the-art accuracy",
     "image": "https://images.ctfassets.net/kftzwdyauwt9/9wR7uKQ9cCyJSZcN9PJCb/c42551ed6a31a9be9ada24fed80a862a/SEO-Introducing-OpenAi-Filter.png?w=1600&h=900&fit=fill",
     "discoveredAt": "2026-04-22T18:31:02.931Z"
+  },
+  {
+    "slug": "what-parameter-golf-taught-us",
+    "url": "https://openai.com/index/what-parameter-golf-taught-us/",
+    "title": "What Parameter Golf taught us",
+    "description": "Parameter Golf brought together 1,000+ participants and 2,000+ submissions to explore AI-assisted machine learning research, coding agents, quantization, and novel model design under strict constraints.",
+    "image": "https://images.ctfassets.net/kftzwdyauwt9/6PRLQARXtH3sfsTBcHlufc/ac545b82a82009609194d64e34538e62/SEO.png?w=1600&h=900&fit=fill",
+    "discoveredAt": "2026-05-13T00:58:50.891Z"
   }
 ]

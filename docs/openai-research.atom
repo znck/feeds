@@ -2,7 +2,7 @@
 <feed xmlns="http://www.w3.org/2005/Atom">
     <id>https://znck.github.io/feeds/openai-research.xml</id>
     <title>OpenAI Research</title>
-    <updated>2026-05-12T18:45:02.565Z</updated>
+    <updated>2026-05-13T00:58:56.295Z</updated>
     <generator>https://github.com/jpmonette/feed</generator>
     <author>
         <name>OpenAI Research</name>
@@ -242,5 +242,12 @@
         <link href="https://openai.com/index/introducing-openai-privacy-filter/"/>
         <updated>2026-04-22T18:31:02.931Z</updated>
         <summary type="html"><![CDATA[OpenAI Privacy Filter is an open-weight model for detecting and redacting personally identifiable information (PII) in text with state-of-the-art accuracy]]></summary>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[What Parameter Golf taught us]]></title>
+        <id>https://openai.com/index/what-parameter-golf-taught-us/</id>
+        <link href="https://openai.com/index/what-parameter-golf-taught-us/"/>
+        <updated>2026-05-13T00:58:50.891Z</updated>
+        <summary type="html"><![CDATA[Parameter Golf brought together 1,000+ participants and 2,000+ submissions to explore AI-assisted machine learning research, coding agents, quantization, and novel model design under strict constraints.]]></summary>
     </entry>
 </feed>
