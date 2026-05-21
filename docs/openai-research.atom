@@ -2,7 +2,7 @@
 <feed xmlns="http://www.w3.org/2005/Atom">
     <id>https://znck.github.io/feeds/openai-research.xml</id>
     <title>OpenAI Research</title>
-    <updated>2026-05-20T19:02:35.220Z</updated>
+    <updated>2026-05-21T01:11:25.732Z</updated>
     <generator>https://github.com/jpmonette/feed</generator>
     <author>
         <name>OpenAI Research</name>
@@ -249,5 +249,11 @@
         <link href="https://openai.com/index/what-parameter-golf-taught-us/"/>
         <updated>2026-05-13T00:58:50.891Z</updated>
         <summary type="html"><![CDATA[Parameter Golf brought together 1,000+ participants and 2,000+ submissions to explore AI-assisted machine learning research, coding agents, quantization, and novel model design under strict constraints.]]></summary>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[Model Disproves Discrete Geometry Conjecture]]></title>
+        <id>https://openai.com/index/model-disproves-discrete-geometry-conjecture/</id>
+        <link href="https://openai.com/index/model-disproves-discrete-geometry-conjecture/"/>
+        <updated>2026-05-21T01:11:25.563Z</updated>
     </entry>
 </feed>

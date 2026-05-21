@@ -269,5 +269,11 @@
     "description": "Parameter Golf brought together 1,000+ participants and 2,000+ submissions to explore AI-assisted machine learning research, coding agents, quantization, and novel model design under strict constraints.",
     "image": "https://images.ctfassets.net/kftzwdyauwt9/6PRLQARXtH3sfsTBcHlufc/ac545b82a82009609194d64e34538e62/SEO.png?w=1600&h=900&fit=fill",
     "discoveredAt": "2026-05-13T00:58:50.891Z"
+  },
+  {
+    "slug": "model-disproves-discrete-geometry-conjecture",
+    "url": "https://openai.com/index/model-disproves-discrete-geometry-conjecture/",
+    "title": "Model Disproves Discrete Geometry Conjecture",
+    "discoveredAt": "2026-05-21T01:11:25.563Z"
   }
 ]
