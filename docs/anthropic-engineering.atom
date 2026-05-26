@@ -2,7 +2,7 @@
 <feed xmlns="http://www.w3.org/2005/Atom">
     <id>https://znck.github.io/feeds/anthropic-engineering.xml</id>
     <title>Anthropic Engineering Blog</title>
-    <updated>2026-05-26T13:19:07.075Z</updated>
+    <updated>2026-05-26T19:02:43.593Z</updated>
     <generator>https://github.com/jpmonette/feed</generator>
     <author>
         <name>Anthropic Engineering</name>
@@ -167,5 +167,12 @@
         <link href="https://www.anthropic.com/engineering/april-23-postmortem"/>
         <updated>2026-04-23T18:32:49.441Z</updated>
         <summary type="html"><![CDATA[We traced recent reports of Claude Code quality issues to three separate changes. Here's what happened and what we're changing.]]></summary>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[How we contain Claude across products]]></title>
+        <id>https://www.anthropic.com/engineering/how-we-contain-claude</id>
+        <link href="https://www.anthropic.com/engineering/how-we-contain-claude"/>
+        <updated>2026-05-26T18:55:31.612Z</updated>
+        <summary type="html"><![CDATA[As agents grow more capable, so does their potential blast radius. The engineering question is how to cap it. Here’s what we’ve learned building containment for claude.ai, Claude Code, and Cowork.]]></summary>
     </entry>
 </feed>

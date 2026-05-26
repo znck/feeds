@@ -164,6 +164,13 @@
             "title": "An update on recent Claude Code quality reports",
             "summary": "We traced recent reports of Claude Code quality issues to three separate changes. Here's what happened and what we're changing.",
             "date_modified": "2026-04-23T18:32:49.441Z"
+        },
+        {
+            "id": "https://www.anthropic.com/engineering/how-we-contain-claude",
+            "url": "https://www.anthropic.com/engineering/how-we-contain-claude",
+            "title": "How we contain Claude across products",
+            "summary": "As agents grow more capable, so does their potential blast radius. The engineering question is how to cap it. Here’s what we’ve learned building containment for claude.ai, Claude Code, and Cowork.",
+            "date_modified": "2026-05-26T18:55:31.612Z"
         }
     ]
 }
