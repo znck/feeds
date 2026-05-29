@@ -2,7 +2,7 @@
 <feed xmlns="http://www.w3.org/2005/Atom">
     <id>https://znck.github.io/feeds/openai-research.xml</id>
     <title>OpenAI Research</title>
-    <updated>2026-05-29T07:38:07.239Z</updated>
+    <updated>2026-05-29T13:25:15.988Z</updated>
     <generator>https://github.com/jpmonette/feed</generator>
     <author>
         <name>OpenAI Research</name>
@@ -256,5 +256,11 @@
         <link href="https://openai.com/index/model-disproves-discrete-geometry-conjecture/"/>
         <updated>2026-05-21T01:11:25.563Z</updated>
         <summary type="html"><![CDATA[An OpenAI model solved the 80-year-old unit distance problem, disproving a major conjecture in discrete geometry and marking a milestone in AI-driven mathematics.]]></summary>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[Strengthening Societal Resilience With Rosalind Biodefense]]></title>
+        <id>https://openai.com/index/strengthening-societal-resilience-with-rosalind-biodefense/</id>
+        <link href="https://openai.com/index/strengthening-societal-resilience-with-rosalind-biodefense/"/>
+        <updated>2026-05-29T13:25:15.819Z</updated>
     </entry>
 </feed>
