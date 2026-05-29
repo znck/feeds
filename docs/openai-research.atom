@@ -2,7 +2,7 @@
 <feed xmlns="http://www.w3.org/2005/Atom">
     <id>https://znck.github.io/feeds/openai-research.xml</id>
     <title>OpenAI Research</title>
-    <updated>2026-05-28T19:07:20.177Z</updated>
+    <updated>2026-05-29T01:13:04.387Z</updated>
     <generator>https://github.com/jpmonette/feed</generator>
     <author>
         <name>OpenAI Research</name>
@@ -255,5 +255,6 @@
         <id>https://openai.com/index/model-disproves-discrete-geometry-conjecture/</id>
         <link href="https://openai.com/index/model-disproves-discrete-geometry-conjecture/"/>
         <updated>2026-05-21T01:11:25.563Z</updated>
+        <summary type="html"><![CDATA[An OpenAI model solved the 80-year-old unit distance problem, disproving a major conjecture in discrete geometry and marking a milestone in AI-driven mathematics.]]></summary>
     </entry>
 </feed>
