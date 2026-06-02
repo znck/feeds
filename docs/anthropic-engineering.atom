@@ -2,7 +2,7 @@
 <feed xmlns="http://www.w3.org/2005/Atom">
     <id>https://znck.github.io/feeds/anthropic-engineering.xml</id>
     <title>Anthropic Engineering Blog</title>
-    <updated>2026-06-02T13:36:53.078Z</updated>
+    <updated>2026-06-02T19:31:11.018Z</updated>
     <generator>https://github.com/jpmonette/feed</generator>
     <author>
         <name>Anthropic Engineering</name>
@@ -142,24 +142,28 @@
         <id>https://www.anthropic.com/engineering/harness-design-long-running-apps</id>
         <link href="https://www.anthropic.com/engineering/harness-design-long-running-apps"/>
         <updated>2026-03-24T18:27:06.890Z</updated>
+        <summary type="html"><![CDATA[Anthropic is an AI safety and research company that's working to build reliable, interpretable, and steerable AI systems.]]></summary>
     </entry>
     <entry>
         <title type="html"><![CDATA[Claude Code auto mode: a safer way to skip permissions]]></title>
         <id>https://www.anthropic.com/engineering/claude-code-auto-mode</id>
         <link href="https://www.anthropic.com/engineering/claude-code-auto-mode"/>
         <updated>2026-03-26T00:43:37.690Z</updated>
+        <summary type="html"><![CDATA[Anthropic is an AI safety and research company that's working to build reliable, interpretable, and steerable AI systems.]]></summary>
     </entry>
     <entry>
         <title type="html"><![CDATA[Scaling Managed Agents: Decoupling the brain from the hands]]></title>
         <id>https://www.anthropic.com/engineering/managed-agents</id>
         <link href="https://www.anthropic.com/engineering/managed-agents"/>
         <updated>2026-04-08T18:34:00.364Z</updated>
+        <summary type="html"><![CDATA[Anthropic is an AI safety and research company that's working to build reliable, interpretable, and steerable AI systems.]]></summary>
     </entry>
     <entry>
         <title type="html"><![CDATA[Equipping agents for the real world with Agent Skills]]></title>
         <id>https://www.anthropic.com/engineering/equipping-agents-for-the-real-world-with-agent-skills</id>
         <link href="https://www.anthropic.com/engineering/equipping-agents-for-the-real-world-with-agent-skills"/>
         <updated>2026-04-15T18:35:44.115Z</updated>
+        <summary type="html"><![CDATA[Discover how Anthropic builds AI agents with practical capabilities through modular skills, enabling them to handle complex real-world tasks more effectively and reliably.]]></summary>
     </entry>
     <entry>
         <title type="html"><![CDATA[An update on recent Claude Code quality reports]]></title>
