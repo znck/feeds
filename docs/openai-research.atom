@@ -2,7 +2,7 @@
 <feed xmlns="http://www.w3.org/2005/Atom">
     <id>https://znck.github.io/feeds/openai-research.xml</id>
     <title>OpenAI Research</title>
-    <updated>2026-06-03T19:35:50.198Z</updated>
+    <updated>2026-06-04T01:23:24.855Z</updated>
     <generator>https://github.com/jpmonette/feed</generator>
     <author>
         <name>OpenAI Research</name>
@@ -263,5 +263,11 @@
         <link href="https://openai.com/index/strengthening-societal-resilience-with-rosalind-biodefense/"/>
         <updated>2026-05-29T13:25:15.819Z</updated>
         <summary type="html"><![CDATA[OpenAI launches Rosalind Biodefense, expanding trusted access to GPT-Rosalind for vetted developers and U.S. government partners advancing biodefense, public health, and pandemic preparedness through frontier AI.]]></summary>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[Introducing New Capabilities To Gpt Rosalind]]></title>
+        <id>https://openai.com/index/introducing-new-capabilities-to-gpt-rosalind/</id>
+        <link href="https://openai.com/index/introducing-new-capabilities-to-gpt-rosalind/"/>
+        <updated>2026-06-04T01:23:24.689Z</updated>
     </entry>
 </feed>
