@@ -2,7 +2,7 @@
 <feed xmlns="http://www.w3.org/2005/Atom">
     <id>https://znck.github.io/feeds/openai-research.xml</id>
     <title>OpenAI Research</title>
-    <updated>2026-06-04T13:24:29.430Z</updated>
+    <updated>2026-06-04T19:03:44.718Z</updated>
     <generator>https://github.com/jpmonette/feed</generator>
     <author>
         <name>OpenAI Research</name>
@@ -269,5 +269,11 @@
         <id>https://openai.com/index/introducing-new-capabilities-to-gpt-rosalind/</id>
         <link href="https://openai.com/index/introducing-new-capabilities-to-gpt-rosalind/"/>
         <updated>2026-06-04T01:23:24.689Z</updated>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[Chatgpt Memory Dreaming]]></title>
+        <id>https://openai.com/index/chatgpt-memory-dreaming/</id>
+        <link href="https://openai.com/index/chatgpt-memory-dreaming/"/>
+        <updated>2026-06-04T19:03:44.548Z</updated>
     </entry>
 </feed>
