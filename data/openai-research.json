@@ -301,5 +301,11 @@
     "discoveredAt": "2026-06-04T19:03:44.548Z",
     "description": "ChatGPT introduces a new memory system to better remember preferences, keeping context fresh and relevant across conversations.",
     "image": "https://images.ctfassets.net/kftzwdyauwt9/41T8ZOansyDZGCqmwOkuOY/3cdeb6ab147c08fa9b313b677fb5318e/16x9_SEO__1_.png?w=1600&h=900&fit=fill"
+  },
+  {
+    "slug": "deployment-simulation",
+    "url": "https://openai.com/index/deployment-simulation/",
+    "title": "Deployment Simulation",
+    "discoveredAt": "2026-06-17T01:20:09.272Z"
   }
 ]

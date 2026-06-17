@@ -2,7 +2,7 @@
 <feed xmlns="http://www.w3.org/2005/Atom">
     <id>https://znck.github.io/feeds/openai-research.xml</id>
     <title>OpenAI Research</title>
-    <updated>2026-06-16T19:27:10.267Z</updated>
+    <updated>2026-06-17T01:20:09.445Z</updated>
     <generator>https://github.com/jpmonette/feed</generator>
     <author>
         <name>OpenAI Research</name>
@@ -277,5 +277,11 @@
         <link href="https://openai.com/index/chatgpt-memory-dreaming/"/>
         <updated>2026-06-04T19:03:44.548Z</updated>
         <summary type="html"><![CDATA[ChatGPT introduces a new memory system to better remember preferences, keeping context fresh and relevant across conversations.]]></summary>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[Deployment Simulation]]></title>
+        <id>https://openai.com/index/deployment-simulation/</id>
+        <link href="https://openai.com/index/deployment-simulation/"/>
+        <updated>2026-06-17T01:20:09.272Z</updated>
     </entry>
 </feed>
