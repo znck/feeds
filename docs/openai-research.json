@@ -316,6 +316,12 @@
             "url": "https://openai.com/index/deployment-simulation/",
             "title": "Deployment Simulation",
             "date_modified": "2026-06-17T01:20:09.272Z"
+        },
+        {
+            "id": "https://openai.com/index/introducing-life-sci-bench/",
+            "url": "https://openai.com/index/introducing-life-sci-bench/",
+            "title": "Introducing Life Sci Bench",
+            "date_modified": "2026-06-18T01:19:17.188Z"
         }
     ]
 }
