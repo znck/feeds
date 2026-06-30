@@ -2,7 +2,7 @@
 <feed xmlns="http://www.w3.org/2005/Atom">
     <id>https://znck.github.io/feeds/openai-research.xml</id>
     <title>OpenAI Research</title>
-    <updated>2026-06-30T12:59:02.057Z</updated>
+    <updated>2026-06-30T18:53:35.699Z</updated>
     <generator>https://github.com/jpmonette/feed</generator>
     <author>
         <name>OpenAI Research</name>
@@ -289,5 +289,11 @@
         <id>https://openai.com/index/introducing-life-sci-bench/</id>
         <link href="https://openai.com/index/introducing-life-sci-bench/"/>
         <updated>2026-06-18T01:19:17.188Z</updated>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[Introducing Genebench Pro]]></title>
+        <id>https://openai.com/index/introducing-genebench-pro/</id>
+        <link href="https://openai.com/index/introducing-genebench-pro/"/>
+        <updated>2026-06-30T18:53:35.507Z</updated>
     </entry>
 </feed>
