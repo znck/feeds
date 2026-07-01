@@ -306,7 +306,9 @@
     "slug": "deployment-simulation",
     "url": "https://openai.com/index/deployment-simulation/",
     "title": "Deployment Simulation",
-    "discoveredAt": "2026-06-17T01:20:09.272Z"
+    "discoveredAt": "2026-06-17T01:20:09.272Z",
+    "description": "OpenAI introduces Deployment Simulation, a method to predict AI model behavior before deployment using real conversation data to improve safety and evaluation accuracy.",
+    "image": "https://images.ctfassets.net/kftzwdyauwt9/4nRyRNS5bPvePGSTz5xlQE/ea4b18c80061d14d480d6a20d57a14eb/SEO_Card.png?w=1600&h=900&fit=fill"
   },
   {
     "slug": "introducing-life-sci-bench",

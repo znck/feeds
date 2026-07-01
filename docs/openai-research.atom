@@ -2,7 +2,7 @@
 <feed xmlns="http://www.w3.org/2005/Atom">
     <id>https://znck.github.io/feeds/openai-research.xml</id>
     <title>OpenAI Research</title>
-    <updated>2026-07-01T07:49:36.190Z</updated>
+    <updated>2026-07-01T13:13:35.829Z</updated>
     <generator>https://github.com/jpmonette/feed</generator>
     <author>
         <name>OpenAI Research</name>
@@ -283,6 +283,7 @@
         <id>https://openai.com/index/deployment-simulation/</id>
         <link href="https://openai.com/index/deployment-simulation/"/>
         <updated>2026-06-17T01:20:09.272Z</updated>
+        <summary type="html"><![CDATA[OpenAI introduces Deployment Simulation, a method to predict AI model behavior before deployment using real conversation data to improve safety and evaluation accuracy.]]></summary>
     </entry>
     <entry>
         <title type="html"><![CDATA[Introducing Life Sci Bench]]></title>
