@@ -2,7 +2,7 @@
 <feed xmlns="http://www.w3.org/2005/Atom">
     <id>https://znck.github.io/feeds/openai-research.xml</id>
     <title>OpenAI Research</title>
-    <updated>2026-07-06T13:31:20.478Z</updated>
+    <updated>2026-07-06T18:51:31.421Z</updated>
     <generator>https://github.com/jpmonette/feed</generator>
     <author>
         <name>OpenAI Research</name>
@@ -296,5 +296,6 @@
         <id>https://openai.com/index/introducing-genebench-pro/</id>
         <link href="https://openai.com/index/introducing-genebench-pro/"/>
         <updated>2026-06-30T18:53:35.507Z</updated>
+        <summary type="html"><![CDATA[Introducing GeneBench-Pro, a new benchmark testing AI performance in genomics, biology, and scientific research using complex, real-world datasets.]]></summary>
     </entry>
 </feed>
