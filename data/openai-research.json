@@ -314,7 +314,9 @@
     "slug": "introducing-life-sci-bench",
     "url": "https://openai.com/index/introducing-life-sci-bench/",
     "title": "Introducing Life Sci Bench",
-    "discoveredAt": "2026-06-18T01:19:17.188Z"
+    "discoveredAt": "2026-06-18T01:19:17.188Z",
+    "description": "Introducing LifeSciBench, an expert-authored, expert-reviewed benchmark for evaluating how AI systems handle real-world life science research tasks and decisions.",
+    "image": "https://images.ctfassets.net/kftzwdyauwt9/1trh6KslZ4XaGmEYHQVoDP/e4a6d9910ef9025bfbe5bed00cf0ae42/LifeSciBench_16x9.png?w=1600&h=900&fit=fill"
   },
   {
     "slug": "introducing-genebench-pro",
