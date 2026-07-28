@@ -2,7 +2,7 @@
 <feed xmlns="http://www.w3.org/2005/Atom">
     <id>https://znck.github.io/feeds/openai-research.xml</id>
     <title>OpenAI Research</title>
-    <updated>2026-07-28T12:52:12.221Z</updated>
+    <updated>2026-07-28T18:42:16.980Z</updated>
     <generator>https://github.com/jpmonette/feed</generator>
     <author>
         <name>OpenAI Research</name>
@@ -304,5 +304,11 @@
         <id>https://openai.com/index/separating-signal-from-noise-coding-evaluations/</id>
         <link href="https://openai.com/index/separating-signal-from-noise-coding-evaluations/"/>
         <updated>2026-07-09T00:57:38.977Z</updated>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[Scientific Computing Agentic Ai]]></title>
+        <id>https://openai.com/index/scientific-computing-agentic-ai/</id>
+        <link href="https://openai.com/index/scientific-computing-agentic-ai/"/>
+        <updated>2026-07-28T18:42:16.811Z</updated>
     </entry>
 </feed>
