@@ -2,7 +2,7 @@
 <feed xmlns="http://www.w3.org/2005/Atom">
     <id>https://znck.github.io/feeds/openai-research.xml</id>
     <title>OpenAI Research</title>
-    <updated>2026-07-29T12:56:28.328Z</updated>
+    <updated>2026-07-29T18:34:39.141Z</updated>
     <generator>https://github.com/jpmonette/feed</generator>
     <author>
         <name>OpenAI Research</name>
@@ -310,5 +310,11 @@
         <id>https://openai.com/index/scientific-computing-agentic-ai/</id>
         <link href="https://openai.com/index/scientific-computing-agentic-ai/"/>
         <updated>2026-07-28T18:42:16.811Z</updated>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[Chatgpt For Academic Researchers]]></title>
+        <id>https://openai.com/index/chatgpt-for-academic-researchers/</id>
+        <link href="https://openai.com/index/chatgpt-for-academic-researchers/"/>
+        <updated>2026-07-29T18:34:38.970Z</updated>
     </entry>
 </feed>
