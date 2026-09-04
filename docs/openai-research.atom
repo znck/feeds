@@ -2,7 +2,7 @@
 <feed xmlns="http://www.w3.org/2005/Atom">
     <id>https://znck.github.io/feeds/openai-research.xml</id>
     <title>OpenAI Research</title>
-    <updated>2026-09-03T18:29:12.215Z</updated>
+    <updated>2026-09-04T00:53:00.875Z</updated>
     <generator>https://github.com/jpmonette/feed</generator>
     <author>
         <name>OpenAI Research</name>
@@ -323,5 +323,11 @@
         <id>https://openai.com/index/how-two-settings-tripled-our-arc-agi-3-scores/</id>
         <link href="https://openai.com/index/how-two-settings-tripled-our-arc-agi-3-scores/"/>
         <updated>2026-07-30T00:50:08.554Z</updated>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[Gpt 6 Astra]]></title>
+        <id>https://openai.com/index/gpt-6-astra/</id>
+        <link href="https://openai.com/index/gpt-6-astra/"/>
+        <updated>2026-09-04T00:53:00.709Z</updated>
     </entry>
 </feed>
