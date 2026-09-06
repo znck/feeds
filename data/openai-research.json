@@ -357,5 +357,17 @@
     "url": "https://openai.com/index/gpt-6-astra/",
     "title": "Gpt 6 Astra",
     "discoveredAt": "2026-09-04T00:53:00.709Z"
+  },
+  {
+    "slug": "an-alien-mind",
+    "url": "https://openai.com/index/an-alien-mind/",
+    "title": "An Alien Mind",
+    "discoveredAt": "2026-09-06T18:26:55.514Z"
+  },
+  {
+    "slug": "research-acceleration-view-inside-openai",
+    "url": "https://openai.com/index/research-acceleration-view-inside-openai/",
+    "title": "Research Acceleration View Inside Openai",
+    "discoveredAt": "2026-09-06T18:26:55.514Z"
   }
 ]

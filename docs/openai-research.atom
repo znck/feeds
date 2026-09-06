@@ -2,7 +2,7 @@
 <feed xmlns="http://www.w3.org/2005/Atom">
     <id>https://znck.github.io/feeds/openai-research.xml</id>
     <title>OpenAI Research</title>
-    <updated>2026-09-06T12:30:11.590Z</updated>
+    <updated>2026-09-06T18:26:55.666Z</updated>
     <generator>https://github.com/jpmonette/feed</generator>
     <author>
         <name>OpenAI Research</name>
@@ -329,5 +329,17 @@
         <id>https://openai.com/index/gpt-6-astra/</id>
         <link href="https://openai.com/index/gpt-6-astra/"/>
         <updated>2026-09-04T00:53:00.709Z</updated>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[An Alien Mind]]></title>
+        <id>https://openai.com/index/an-alien-mind/</id>
+        <link href="https://openai.com/index/an-alien-mind/"/>
+        <updated>2026-09-06T18:26:55.514Z</updated>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[Research Acceleration View Inside Openai]]></title>
+        <id>https://openai.com/index/research-acceleration-view-inside-openai/</id>
+        <link href="https://openai.com/index/research-acceleration-view-inside-openai/"/>
+        <updated>2026-09-06T18:26:55.514Z</updated>
     </entry>
 </feed>
