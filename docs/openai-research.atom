@@ -2,7 +2,7 @@
 <feed xmlns="http://www.w3.org/2005/Atom">
     <id>https://znck.github.io/feeds/openai-research.xml</id>
     <title>OpenAI Research</title>
-    <updated>2026-09-07T00:56:37.844Z</updated>
+    <updated>2026-09-07T06:44:51.240Z</updated>
     <generator>https://github.com/jpmonette/feed</generator>
     <author>
         <name>OpenAI Research</name>
@@ -329,6 +329,7 @@
         <id>https://openai.com/index/gpt-6-astra/</id>
         <link href="https://openai.com/index/gpt-6-astra/"/>
         <updated>2026-09-04T00:53:00.709Z</updated>
+        <summary type="html"><![CDATA[Introducing GPT-6 Astra, our most intelligent and aligned model yet, with state-of-the-art capabilities across computer use, coding, cybersecurity, and science.]]></summary>
     </entry>
     <entry>
         <title type="html"><![CDATA[An Alien Mind]]></title>
