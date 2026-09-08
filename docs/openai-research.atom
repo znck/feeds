@@ -2,7 +2,7 @@
 <feed xmlns="http://www.w3.org/2005/Atom">
     <id>https://znck.github.io/feeds/openai-research.xml</id>
     <title>OpenAI Research</title>
-    <updated>2026-09-07T18:28:32.327Z</updated>
+    <updated>2026-09-08T00:43:30.476Z</updated>
     <generator>https://github.com/jpmonette/feed</generator>
     <author>
         <name>OpenAI Research</name>
@@ -304,6 +304,7 @@
         <id>https://openai.com/index/separating-signal-from-noise-coding-evaluations/</id>
         <link href="https://openai.com/index/separating-signal-from-noise-coding-evaluations/"/>
         <updated>2026-07-09T00:57:38.977Z</updated>
+        <summary type="html"><![CDATA[A new analysis from OpenAI reveals issues in SWE-Bench Pro, a popular coding benchmark, raising concerns about reliability and accuracy in evaluating AI models.]]></summary>
     </entry>
     <entry>
         <title type="html"><![CDATA[Scientific Computing Agentic Ai]]></title>
@@ -317,12 +318,14 @@
         <id>https://openai.com/index/chatgpt-for-academic-researchers/</id>
         <link href="https://openai.com/index/chatgpt-for-academic-researchers/"/>
         <updated>2026-07-29T18:34:38.970Z</updated>
+        <summary type="html"><![CDATA[OpenAI is giving 100,000 academic researchers free access to ChatGPT's most advanced AI models to accelerate scientific research, collaboration, and discovery.]]></summary>
     </entry>
     <entry>
         <title type="html"><![CDATA[How Two Settings Tripled Our Arc Agi 3 Scores]]></title>
         <id>https://openai.com/index/how-two-settings-tripled-our-arc-agi-3-scores/</id>
         <link href="https://openai.com/index/how-two-settings-tripled-our-arc-agi-3-scores/"/>
         <updated>2026-07-30T00:50:08.554Z</updated>
+        <summary type="html"><![CDATA[How two API settings improved GPT-5.6 performance on ARC-AGI-3, boosting scores and efficiency by retaining reasoning and enabling compaction.]]></summary>
     </entry>
     <entry>
         <title type="html"><![CDATA[Gpt 6 Astra]]></title>
@@ -336,11 +339,13 @@
         <id>https://openai.com/index/an-alien-mind/</id>
         <link href="https://openai.com/index/an-alien-mind/"/>
         <updated>2026-09-06T18:26:55.514Z</updated>
+        <summary type="html"><![CDATA[Jakub Pachocki reflects on increasingly capable AI and the challenge of keeping it aligned. He calls for stronger safeguards and international coordination.]]></summary>
     </entry>
     <entry>
         <title type="html"><![CDATA[Research Acceleration View Inside Openai]]></title>
         <id>https://openai.com/index/research-acceleration-view-inside-openai/</id>
         <link href="https://openai.com/index/research-acceleration-view-inside-openai/"/>
         <updated>2026-09-06T18:26:55.514Z</updated>
+        <summary type="html"><![CDATA[Inside OpenAI, coding agents are reshaping AI research. Explore early data on agent usage, experiment velocity, task complexity, and research acceleration.]]></summary>
     </entry>
 </feed>

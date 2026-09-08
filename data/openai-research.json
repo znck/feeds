@@ -330,7 +330,9 @@
     "slug": "separating-signal-from-noise-coding-evaluations",
     "url": "https://openai.com/index/separating-signal-from-noise-coding-evaluations/",
     "title": "Separating Signal From Noise Coding Evaluations",
-    "discoveredAt": "2026-07-09T00:57:38.977Z"
+    "discoveredAt": "2026-07-09T00:57:38.977Z",
+    "description": "A new analysis from OpenAI reveals issues in SWE-Bench Pro, a popular coding benchmark, raising concerns about reliability and accuracy in evaluating AI models.",
+    "image": "https://images.ctfassets.net/kftzwdyauwt9/5f0Xf4wOuXVsX7TZUM4tjl/4672bf7bf93bad67ade28dce57f62638/Seperating-signal-from-noise-SEO.png?w=1600&h=900&fit=fill"
   },
   {
     "slug": "scientific-computing-agentic-ai",
@@ -344,13 +346,17 @@
     "slug": "chatgpt-for-academic-researchers",
     "url": "https://openai.com/index/chatgpt-for-academic-researchers/",
     "title": "Chatgpt For Academic Researchers",
-    "discoveredAt": "2026-07-29T18:34:38.970Z"
+    "discoveredAt": "2026-07-29T18:34:38.970Z",
+    "description": "OpenAI is giving 100,000 academic researchers free access to ChatGPT's most advanced AI models to accelerate scientific research, collaboration, and discovery.",
+    "image": "https://images.ctfassets.net/kftzwdyauwt9/2G2SR0DTkiabzzbrMZIW5Q/cb55c63d82440eaee372292302d5f2b3/academic-research-og.png?w=1600&h=900&fit=fill"
   },
   {
     "slug": "how-two-settings-tripled-our-arc-agi-3-scores",
     "url": "https://openai.com/index/how-two-settings-tripled-our-arc-agi-3-scores/",
     "title": "How Two Settings Tripled Our Arc Agi 3 Scores",
-    "discoveredAt": "2026-07-30T00:50:08.554Z"
+    "discoveredAt": "2026-07-30T00:50:08.554Z",
+    "description": "How two API settings improved GPT-5.6 performance on ARC-AGI-3, boosting scores and efficiency by retaining reasoning and enabling compaction.",
+    "image": "https://images.ctfassets.net/kftzwdyauwt9/3lr743fXRey8lYJgiaReEo/80b223beba7cf8fcd4108d533741a56b/ARC-AGI-3_art-card_16x9.png?w=1600&h=900&fit=fill"
   },
   {
     "slug": "gpt-6-astra",
@@ -364,12 +370,16 @@
     "slug": "an-alien-mind",
     "url": "https://openai.com/index/an-alien-mind/",
     "title": "An Alien Mind",
-    "discoveredAt": "2026-09-06T18:26:55.514Z"
+    "discoveredAt": "2026-09-06T18:26:55.514Z",
+    "description": "Jakub Pachocki reflects on increasingly capable AI and the challenge of keeping it aligned. He calls for stronger safeguards and international coordination.",
+    "image": "https://images.ctfassets.net/kftzwdyauwt9/7f6sLIUC3tdeliJMQ3PwOq/c47109c8b3f00ccbf881271c9c720877/og-an-alien-mind.png?w=1600&h=900&fit=fill"
   },
   {
     "slug": "research-acceleration-view-inside-openai",
     "url": "https://openai.com/index/research-acceleration-view-inside-openai/",
     "title": "Research Acceleration View Inside Openai",
-    "discoveredAt": "2026-09-06T18:26:55.514Z"
+    "discoveredAt": "2026-09-06T18:26:55.514Z",
+    "description": "Inside OpenAI, coding agents are reshaping AI research. Explore early data on agent usage, experiment velocity, task complexity, and research acceleration.",
+    "image": "https://images.ctfassets.net/kftzwdyauwt9/CKNTAkrFq7W0JOjXP5np2/c26e2323a05dec6bd41f6515c5d6be0f/SEO_Card__11_.png?w=1600&h=900&fit=fill"
   }
 ]
