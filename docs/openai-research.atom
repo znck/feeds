@@ -2,7 +2,7 @@
 <feed xmlns="http://www.w3.org/2005/Atom">
     <id>https://znck.github.io/feeds/openai-research.xml</id>
     <title>OpenAI Research</title>
-    <updated>2026-09-08T12:34:08.274Z</updated>
+    <updated>2026-09-08T18:30:11.931Z</updated>
     <generator>https://github.com/jpmonette/feed</generator>
     <author>
         <name>OpenAI Research</name>
@@ -347,5 +347,11 @@
         <link href="https://openai.com/index/research-acceleration-view-inside-openai/"/>
         <updated>2026-09-06T18:26:55.514Z</updated>
         <summary type="html"><![CDATA[Inside OpenAI, coding agents are reshaping AI research. Explore early data on agent usage, experiment velocity, task complexity, and research acceleration.]]></summary>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[Navier Stokes Solution]]></title>
+        <id>https://openai.com/index/navier-stokes-solution/</id>
+        <link href="https://openai.com/index/navier-stokes-solution/"/>
+        <updated>2026-09-08T18:30:11.795Z</updated>
     </entry>
 </feed>
