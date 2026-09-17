@@ -387,5 +387,11 @@
     "url": "https://openai.com/index/navier-stokes-solution/",
     "title": "Navier Stokes Solution",
     "discoveredAt": "2026-09-08T18:30:11.795Z"
+  },
+  {
+    "slug": "model-misalignment-reporting-framework",
+    "url": "https://openai.com/index/model-misalignment-reporting-framework/",
+    "title": "Model Misalignment Reporting Framework",
+    "discoveredAt": "2026-09-17T00:53:02.680Z"
   }
 ]

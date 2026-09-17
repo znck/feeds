@@ -2,7 +2,7 @@
 <feed xmlns="http://www.w3.org/2005/Atom">
     <id>https://znck.github.io/feeds/openai-research.xml</id>
     <title>OpenAI Research</title>
-    <updated>2026-09-16T18:29:09.125Z</updated>
+    <updated>2026-09-17T00:53:02.854Z</updated>
     <generator>https://github.com/jpmonette/feed</generator>
     <author>
         <name>OpenAI Research</name>
@@ -353,5 +353,11 @@
         <id>https://openai.com/index/navier-stokes-solution/</id>
         <link href="https://openai.com/index/navier-stokes-solution/"/>
         <updated>2026-09-08T18:30:11.795Z</updated>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[Model Misalignment Reporting Framework]]></title>
+        <id>https://openai.com/index/model-misalignment-reporting-framework/</id>
+        <link href="https://openai.com/index/model-misalignment-reporting-framework/"/>
+        <updated>2026-09-17T00:53:02.680Z</updated>
     </entry>
 </feed>
