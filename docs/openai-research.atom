@@ -2,7 +2,7 @@
 <feed xmlns="http://www.w3.org/2005/Atom">
     <id>https://znck.github.io/feeds/openai-research.xml</id>
     <title>OpenAI Research</title>
-    <updated>2026-09-22T12:33:45.829Z</updated>
+    <updated>2026-09-22T18:31:38.328Z</updated>
     <generator>https://github.com/jpmonette/feed</generator>
     <author>
         <name>OpenAI Research</name>
@@ -359,5 +359,11 @@
         <id>https://openai.com/index/model-misalignment-reporting-framework/</id>
         <link href="https://openai.com/index/model-misalignment-reporting-framework/"/>
         <updated>2026-09-17T00:53:02.680Z</updated>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[Introducing Gpt 6 Sol And Luna]]></title>
+        <id>https://openai.com/index/introducing-gpt-6-sol-and-luna/</id>
+        <link href="https://openai.com/index/introducing-gpt-6-sol-and-luna/"/>
+        <updated>2026-09-22T18:31:38.150Z</updated>
     </entry>
 </feed>
