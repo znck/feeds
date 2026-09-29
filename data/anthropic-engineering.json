@@ -45,6 +45,15 @@
     "date": "2026-03-24T00:00:00.000Z"
   },
   {
+    "slug": "eval-awareness-browsecomp",
+    "url": "https://www.anthropic.com/engineering/eval-awareness-browsecomp",
+    "title": "Eval awareness in Claude Opus 4.6's BrowseComp performance",
+    "description": "Anthropic is an AI safety and research company that's working to build reliable, interpretable, and steerable AI systems.",
+    "discoveredAt": "2026-03-13T00:00:00.000Z",
+    "image": "https://cdn.sanity.io/images/4zrzovbb/website/82d2262129af025d98a46411fbd42ee970a95cb4-2400x1260.heif",
+    "date": "2026-03-06T00:00:00.000Z"
+  },
+  {
     "slug": "building-c-compiler",
     "url": "https://www.anthropic.com/engineering/building-c-compiler",
     "title": "Building a C compiler with a team of parallel Claudes",
@@ -197,13 +206,5 @@
     "description": "",
     "date": "2024-09-19T00:00:00.000Z",
     "discoveredAt": "2026-03-13T00:00:00.000Z"
-  },
-  {
-    "slug": "eval-awareness-browsecomp",
-    "url": "https://www.anthropic.com/engineering/eval-awareness-browsecomp",
-    "title": "Eval awareness in Claude Opus 4.6's BrowseComp performance",
-    "description": "Anthropic is an AI safety and research company that's working to build reliable, interpretable, and steerable AI systems.",
-    "discoveredAt": "2026-03-13T00:00:00.000Z",
-    "image": "https://cdn.sanity.io/images/4zrzovbb/website/82d2262129af025d98a46411fbd42ee970a95cb4-2400x1260.heif"
   }
 ]
