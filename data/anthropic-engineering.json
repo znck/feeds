@@ -1,5 +1,14 @@
 [
   {
+    "slug": "redesigning-source-control",
+    "url": "https://www.anthropic.com/engineering/redesigning-source-control",
+    "title": "Redesigning source control at Anthropic",
+    "description": "As our merges per day grew more than tenfold, source control became our biggest development bottleneck. Here, we share how we migrated to an in-house version control system in five months.",
+    "date": "2026-10-13T00:00:00.000Z",
+    "image": "https://www-cdn.anthropic.com/images/4zrzovbb/website/d344b849251502fade67ad16f09bb86fa6f42363-500x263.png",
+    "discoveredAt": "2026-10-13T18:22:19.197Z"
+  },
+  {
     "slug": "how-we-contain-claude",
     "url": "https://www.anthropic.com/engineering/how-we-contain-claude",
     "title": "How we contain Claude across products",
