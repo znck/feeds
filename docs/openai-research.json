@@ -426,6 +426,12 @@
             "url": "https://openai.com/index/low-resource-programming-languages/",
             "title": "Low Resource Programming Languages",
             "date_modified": "2026-10-20T00:52:39.679Z"
+        },
+        {
+            "id": "https://openai.com/index/scaling-ai-research-for-complex-biological-data/",
+            "url": "https://openai.com/index/scaling-ai-research-for-complex-biological-data/",
+            "title": "Scaling Ai Research For Complex Biological Data",
+            "date_modified": "2026-10-21T18:31:20.426Z"
         }
     ]
 }

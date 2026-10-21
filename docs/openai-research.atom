@@ -2,7 +2,7 @@
 <feed xmlns="http://www.w3.org/2005/Atom">
     <id>https://znck.github.io/feeds/openai-research.xml</id>
     <title>OpenAI Research</title>
-    <updated>2026-10-21T12:34:50.273Z</updated>
+    <updated>2026-10-21T18:31:20.602Z</updated>
     <generator>https://github.com/jpmonette/feed</generator>
     <author>
         <name>OpenAI Research</name>
@@ -383,5 +383,11 @@
         <id>https://openai.com/index/low-resource-programming-languages/</id>
         <link href="https://openai.com/index/low-resource-programming-languages/"/>
         <updated>2026-10-20T00:52:39.679Z</updated>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[Scaling Ai Research For Complex Biological Data]]></title>
+        <id>https://openai.com/index/scaling-ai-research-for-complex-biological-data/</id>
+        <link href="https://openai.com/index/scaling-ai-research-for-complex-biological-data/"/>
+        <updated>2026-10-21T18:31:20.426Z</updated>
     </entry>
 </feed>
