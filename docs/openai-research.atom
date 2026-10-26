@@ -2,7 +2,7 @@
 <feed xmlns="http://www.w3.org/2005/Atom">
     <id>https://znck.github.io/feeds/openai-research.xml</id>
     <title>OpenAI Research</title>
-    <updated>2026-10-26T13:59:44.866Z</updated>
+    <updated>2026-10-26T18:36:43.368Z</updated>
     <generator>https://github.com/jpmonette/feed</generator>
     <author>
         <name>OpenAI Research</name>
@@ -389,5 +389,11 @@
         <id>https://openai.com/index/scaling-ai-research-for-complex-biological-data/</id>
         <link href="https://openai.com/index/scaling-ai-research-for-complex-biological-data/"/>
         <updated>2026-10-21T18:31:20.426Z</updated>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[Chatgpt Expanding World Of Work]]></title>
+        <id>https://openai.com/index/chatgpt-expanding-world-of-work/</id>
+        <link href="https://openai.com/index/chatgpt-expanding-world-of-work/"/>
+        <updated>2026-10-26T18:36:43.208Z</updated>
     </entry>
 </feed>
