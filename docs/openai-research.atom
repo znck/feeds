@@ -2,7 +2,7 @@
 <feed xmlns="http://www.w3.org/2005/Atom">
     <id>https://znck.github.io/feeds/openai-research.xml</id>
     <title>OpenAI Research</title>
-    <updated>2026-11-02T12:28:02.315Z</updated>
+    <updated>2026-11-02T18:24:55.074Z</updated>
     <generator>https://github.com/jpmonette/feed</generator>
     <author>
         <name>OpenAI Research</name>
@@ -401,5 +401,11 @@
         <id>https://openai.com/index/building-scientific-understanding-with-academic-communities/</id>
         <link href="https://openai.com/index/building-scientific-understanding-with-academic-communities/"/>
         <updated>2026-10-27T00:53:13.926Z</updated>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[Lifeval]]></title>
+        <id>https://openai.com/index/lifeval/</id>
+        <link href="https://openai.com/index/lifeval/"/>
+        <updated>2026-11-02T18:24:54.890Z</updated>
     </entry>
 </feed>
