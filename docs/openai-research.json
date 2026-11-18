@@ -468,6 +468,12 @@
             "url": "https://openai.com/index/science-at-the-frontier/",
             "title": "Science At The Frontier",
             "date_modified": "2026-11-16T18:25:37.511Z"
+        },
+        {
+            "id": "https://openai.com/index/advancing-chip-design-with-our-models/",
+            "url": "https://openai.com/index/advancing-chip-design-with-our-models/",
+            "title": "Advancing Chip Design With Our Models",
+            "date_modified": "2026-11-18T18:25:00.935Z"
         }
     ]
 }
