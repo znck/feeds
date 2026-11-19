@@ -2,7 +2,7 @@
 <feed xmlns="http://www.w3.org/2005/Atom">
     <id>https://znck.github.io/feeds/openai-research.xml</id>
     <title>OpenAI Research</title>
-    <updated>2026-11-18T18:25:01.078Z</updated>
+    <updated>2026-11-19T00:41:07.222Z</updated>
     <generator>https://github.com/jpmonette/feed</generator>
     <author>
         <name>OpenAI Research</name>
@@ -431,5 +431,11 @@
         <id>https://openai.com/index/advancing-chip-design-with-our-models/</id>
         <link href="https://openai.com/index/advancing-chip-design-with-our-models/"/>
         <updated>2026-11-18T18:25:00.935Z</updated>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[Research Acceleration Jagged Frontier]]></title>
+        <id>https://openai.com/index/research-acceleration-jagged-frontier/</id>
+        <link href="https://openai.com/index/research-acceleration-jagged-frontier/"/>
+        <updated>2026-11-19T00:41:07.098Z</updated>
     </entry>
 </feed>
