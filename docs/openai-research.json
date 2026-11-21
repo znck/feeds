@@ -395,91 +395,129 @@
             "id": "https://openai.com/index/navier-stokes-solution/",
             "url": "https://openai.com/index/navier-stokes-solution/",
             "title": "Navier Stokes Solution",
+            "summary": "We’re sharing an AI-generated solution to the Navier–Stokes Millennium Prize Problem, including a writeup and a formal proof in Lean.",
+            "image": "https://images.ctfassets.net/kftzwdyauwt9/7hiHADoMhgN0iDcje9Xdei/2dae059c10a0dfa3e2814ebb522e9df2/navier-stokes-og.png?w=1600&h=900&fit=fill",
             "date_modified": "2026-09-08T18:30:11.795Z"
         },
         {
             "id": "https://openai.com/index/model-misalignment-reporting-framework/",
             "url": "https://openai.com/index/model-misalignment-reporting-framework/",
             "title": "Model Misalignment Reporting Framework",
+            "summary": "OpenAI shares a framework for tracking, investigating, and disclosing model misalignment, alongside six reports of unexpected or concerning model behavior.",
+            "image": "https://images.ctfassets.net/kftzwdyauwt9/1ZIYnl31jt9gPO8qCbMGBZ/aaf74083a5332be1cb265dbdb6e652e0/model-misalignment-reporting-framework--seo-v002.png?w=1600&h=900&fit=fill",
             "date_modified": "2026-09-17T00:53:02.680Z"
         },
         {
             "id": "https://openai.com/index/introducing-gpt-6-sol-and-luna/",
             "url": "https://openai.com/index/introducing-gpt-6-sol-and-luna/",
             "title": "Introducing Gpt 6 Sol And Luna",
+            "summary": "Meet GPT-6 Sol and Luna, two models that bring frontier intelligence to everyday work with different balances of capability and cost.",
+            "image": "https://images.ctfassets.net/kftzwdyauwt9/7fvmMcBIvMTXxVJh7NEMt1/48a75e624699bb1e218366c1d3522048/gpt-6-sol-luna-seo.png?w=1600&h=900&fit=fill",
             "date_modified": "2026-09-22T18:31:38.150Z"
         },
         {
             "id": "https://openai.com/index/sharing-ai-progress-in-mathematics/",
             "url": "https://openai.com/index/sharing-ai-progress-in-mathematics/",
             "title": "Sharing Ai Progress In Mathematics",
+            "summary": "OpenAI publishes new results on open problems in mathematics from an internal frontier model and shares Lean proof formalizations and research details on GitHub.",
+            "image": "https://images.ctfassets.net/kftzwdyauwt9/3430T8Aum4BAOFwLEnHQmC/bbc034e46bc5766dc6569183e87fa6df/ai-progress-in-mathematics-social.png?w=1600&h=900&fit=fill",
             "date_modified": "2026-10-07T00:59:00.308Z"
         },
         {
             "id": "https://openai.com/index/introducing-the-rosalind-academic-plan/",
             "url": "https://openai.com/index/introducing-the-rosalind-academic-plan/",
             "title": "Introducing The Rosalind Academic Plan",
+            "summary": "Introducing the Rosalind Academic Plan, offering eligible academic labs sponsored access to GPT-Rosalind and tools to advance life sciences research.",
+            "image": "https://images.ctfassets.net/kftzwdyauwt9/g91SfQ7YxvtosiWacUxkg/47162ea17967b74890a6ef14a8c9fa78/rosalind-academic-plan-seo.png?w=1600&h=900&fit=fill",
             "date_modified": "2026-10-16T00:50:20.182Z"
         },
         {
             "id": "https://openai.com/index/low-resource-programming-languages/",
             "url": "https://openai.com/index/low-resource-programming-languages/",
             "title": "Low Resource Programming Languages",
+            "summary": "Learn how OpenAI is improving ChatGPT across low-resource programming languages, with new evaluations for software engineering, SQLite, and COBOL migration.",
+            "image": "https://images.ctfassets.net/kftzwdyauwt9/1wQpFFie9sKfVWvApPYyn5/db28adb6a2dfdfdef39fb548fca8913d/low_resource_programming__SEO_Card__3_.png?w=1600&h=900&fit=fill",
             "date_modified": "2026-10-20T00:52:39.679Z"
         },
         {
             "id": "https://openai.com/index/scaling-ai-research-for-complex-biological-data/",
             "url": "https://openai.com/index/scaling-ai-research-for-complex-biological-data/",
             "title": "Scaling Ai Research For Complex Biological Data",
+            "summary": "See how OpenAI, PerturbAI, and Scripps Research used distributed AI agents to uncover promising research leads in data from millions of brain cells.",
+            "image": "https://images.ctfassets.net/kftzwdyauwt9/5Uhfx9LWwXWN8zKg7a6aNi/021edebfedf0c6f9638f929ba23900ab/scaling-ai-biological-data-social.png?w=1600&h=900&fit=fill",
             "date_modified": "2026-10-21T18:31:20.426Z"
         },
         {
             "id": "https://openai.com/index/chatgpt-expanding-world-of-work/",
             "url": "https://openai.com/index/chatgpt-expanding-world-of-work/",
             "title": "Chatgpt Expanding World Of Work",
+            "summary": "Explore OpenAI Signals data on 165 work activities across nearly 100 countries, revealing how people use ChatGPT for work and how usage changes over time.",
+            "image": "https://images.ctfassets.net/kftzwdyauwt9/6K9gMLTc6r3aFUbyZ2uZDN/d05f2ece956d33201cab06373febac3a/how-workers-use-chatgpt-social.png?w=1600&h=900&fit=fill",
             "date_modified": "2026-10-26T18:36:43.208Z"
         },
         {
             "id": "https://openai.com/index/building-scientific-understanding-with-academic-communities/",
             "url": "https://openai.com/index/building-scientific-understanding-with-academic-communities/",
             "title": "Building Scientific Understanding With Academic Communities",
+            "summary": "OpenAI shares model results on the Kakeya conjecture, Exponential Time Hypothesis, and quantum chromodynamics—and how researchers can verify and build on them.",
+            "image": "https://images.ctfassets.net/kftzwdyauwt9/5HKwJOTURosg0IoKJA21s8/88eefd210a578266fca1a9d9454daadc/from-ai-results-to-scientific-understanding-social.png?w=1600&h=900&fit=fill",
             "date_modified": "2026-10-27T00:53:13.926Z"
         },
         {
             "id": "https://openai.com/index/lifeval/",
             "url": "https://openai.com/index/lifeval/",
             "title": "Lifeval",
+            "summary": "Introducing LifeVal, a benchmark measuring how well AI helps people complete everyday tasks, from finding childcare to managing finances and government paperwork.",
+            "image": "https://images.ctfassets.net/kftzwdyauwt9/3Iad2h8cMUadlldiZqbsAo/69264040a908479aa8843b590b0015b5/lifeval-social-crayon.png?w=1600&h=900&fit=fill",
             "date_modified": "2026-11-02T18:24:54.890Z"
         },
         {
             "id": "https://openai.com/index/accelerating-engineering-for-the-physical-world/",
             "url": "https://openai.com/index/accelerating-engineering-for-the-physical-world/",
             "title": "Accelerating Engineering For The Physical World",
+            "summary": "Discover how ChatGPT and Codex are helping engineers accelerate CAD, PCB design, simulation, and other workflows across the physical world.",
+            "image": "https://images.ctfassets.net/kftzwdyauwt9/3NAeFNOstkEE0aSxayt8NT/cedb470d8c0bcd7e6a2ca828c1db136c/accelerating-engineering-physical-world-social.png?w=1600&h=900&fit=fill",
             "date_modified": "2026-11-04T00:39:11.266Z"
         },
         {
             "id": "https://openai.com/index/expanding-chatgpt-for-academic-researchers/",
             "url": "https://openai.com/index/expanding-chatgpt-for-academic-researchers/",
             "title": "Expanding Chatgpt For Academic Researchers",
+            "summary": "We’re expanding our ChatGPT for Academic Researchers program to offer 200,000 researchers worldwide free access to our frontier models.",
+            "image": "https://images.ctfassets.net/kftzwdyauwt9/793p1h1iUmksoWkDep5NRR/580e87d687cea7ef8e8288bef51c7bd4/academic-researchers-seo-card.png?w=1600&h=900&fit=fill",
             "date_modified": "2026-11-16T18:25:37.510Z"
         },
         {
             "id": "https://openai.com/index/science-at-the-frontier/",
             "url": "https://openai.com/index/science-at-the-frontier/",
             "title": "Science At The Frontier",
+            "summary": "Explore how more than 1,800 scientists use ChatGPT in research. See findings on daily workflows, reported productivity, and expectations for discovery.",
+            "image": "https://images.ctfassets.net/kftzwdyauwt9/r0NQL0JSQTS1Kzvpq9Fqm/6b10f87bd44e394bb04737e1ca00b017/science-at-the-frontier-social.png?w=1600&h=900&fit=fill",
             "date_modified": "2026-11-16T18:25:37.511Z"
         },
         {
             "id": "https://openai.com/index/advancing-chip-design-with-our-models/",
             "url": "https://openai.com/index/advancing-chip-design-with-our-models/",
             "title": "Advancing Chip Design With Our Models",
+            "summary": "OpenAI models optimized circuits used in Jalapeño silicon and improved RISC‑V core designs, showing progress in AI-assisted chip design with GPT‑6 Astra.",
+            "image": "https://images.ctfassets.net/kftzwdyauwt9/658zg0FHAg7zuL73DTFCfC/fff21fd18c260ce64a10a14ee8d4e851/advancing-chip-design-social.png?w=1600&h=900&fit=fill",
             "date_modified": "2026-11-18T18:25:00.935Z"
         },
         {
             "id": "https://openai.com/index/research-acceleration-jagged-frontier/",
             "url": "https://openai.com/index/research-acceleration-jagged-frontier/",
             "title": "Research Acceleration Jagged Frontier",
+            "summary": "OpenAI measures how coding agents are accelerating AI research, where their performance remains uneven, and what this signals about recursive self-improvement.",
+            "image": "https://images.ctfassets.net/kftzwdyauwt9/2YS8yWiGpKflhlEnAkcLU/f51ead4391706f6c3198f0d61a0f147a/research-acceleration-the-jagged-frontier-social.png",
             "date_modified": "2026-11-19T00:41:07.098Z"
+        },
+        {
+            "id": "https://openai.com/index/introducing-medchembench/",
+            "url": "https://openai.com/index/introducing-medchembench/",
+            "title": "Can AI help scientists identify promising drug candidates?",
+            "summary": "MedChemBench evaluates how well AI models interpret molecular structures, reason from experimental evidence, and select compounds in early drug discovery.",
+            "image": "https://images.ctfassets.net/kftzwdyauwt9/37ZvKdwVigsgJ7G3FMr4Nb/12854063a79d19d63278704bf54e3010/introducing-medchembench-social.png?w=1600&h=900&fit=fill",
+            "date_modified": "2026-11-21T00:25:57.558Z"
         }
     ]
 }

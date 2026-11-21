@@ -2,7 +2,7 @@
 <feed xmlns="http://www.w3.org/2005/Atom">
     <id>https://znck.github.io/feeds/openai-research.xml</id>
     <title>OpenAI Research</title>
-    <updated>2026-11-20T18:25:44.442Z</updated>
+    <updated>2026-11-21T00:25:57.751Z</updated>
     <generator>https://github.com/jpmonette/feed</generator>
     <author>
         <name>OpenAI Research</name>
@@ -353,89 +353,111 @@
         <id>https://openai.com/index/navier-stokes-solution/</id>
         <link href="https://openai.com/index/navier-stokes-solution/"/>
         <updated>2026-09-08T18:30:11.795Z</updated>
+        <summary type="html"><![CDATA[We’re sharing an AI-generated solution to the Navier–Stokes Millennium Prize Problem, including a writeup and a formal proof in Lean.]]></summary>
     </entry>
     <entry>
         <title type="html"><![CDATA[Model Misalignment Reporting Framework]]></title>
         <id>https://openai.com/index/model-misalignment-reporting-framework/</id>
         <link href="https://openai.com/index/model-misalignment-reporting-framework/"/>
         <updated>2026-09-17T00:53:02.680Z</updated>
+        <summary type="html"><![CDATA[OpenAI shares a framework for tracking, investigating, and disclosing model misalignment, alongside six reports of unexpected or concerning model behavior.]]></summary>
     </entry>
     <entry>
         <title type="html"><![CDATA[Introducing Gpt 6 Sol And Luna]]></title>
         <id>https://openai.com/index/introducing-gpt-6-sol-and-luna/</id>
         <link href="https://openai.com/index/introducing-gpt-6-sol-and-luna/"/>
         <updated>2026-09-22T18:31:38.150Z</updated>
+        <summary type="html"><![CDATA[Meet GPT-6 Sol and Luna, two models that bring frontier intelligence to everyday work with different balances of capability and cost.]]></summary>
     </entry>
     <entry>
         <title type="html"><![CDATA[Sharing Ai Progress In Mathematics]]></title>
         <id>https://openai.com/index/sharing-ai-progress-in-mathematics/</id>
         <link href="https://openai.com/index/sharing-ai-progress-in-mathematics/"/>
         <updated>2026-10-07T00:59:00.308Z</updated>
+        <summary type="html"><![CDATA[OpenAI publishes new results on open problems in mathematics from an internal frontier model and shares Lean proof formalizations and research details on GitHub.]]></summary>
     </entry>
     <entry>
         <title type="html"><![CDATA[Introducing The Rosalind Academic Plan]]></title>
         <id>https://openai.com/index/introducing-the-rosalind-academic-plan/</id>
         <link href="https://openai.com/index/introducing-the-rosalind-academic-plan/"/>
         <updated>2026-10-16T00:50:20.182Z</updated>
+        <summary type="html"><![CDATA[Introducing the Rosalind Academic Plan, offering eligible academic labs sponsored access to GPT-Rosalind and tools to advance life sciences research.]]></summary>
     </entry>
     <entry>
         <title type="html"><![CDATA[Low Resource Programming Languages]]></title>
         <id>https://openai.com/index/low-resource-programming-languages/</id>
         <link href="https://openai.com/index/low-resource-programming-languages/"/>
         <updated>2026-10-20T00:52:39.679Z</updated>
+        <summary type="html"><![CDATA[Learn how OpenAI is improving ChatGPT across low-resource programming languages, with new evaluations for software engineering, SQLite, and COBOL migration.]]></summary>
     </entry>
     <entry>
         <title type="html"><![CDATA[Scaling Ai Research For Complex Biological Data]]></title>
         <id>https://openai.com/index/scaling-ai-research-for-complex-biological-data/</id>
         <link href="https://openai.com/index/scaling-ai-research-for-complex-biological-data/"/>
         <updated>2026-10-21T18:31:20.426Z</updated>
+        <summary type="html"><![CDATA[See how OpenAI, PerturbAI, and Scripps Research used distributed AI agents to uncover promising research leads in data from millions of brain cells.]]></summary>
     </entry>
     <entry>
         <title type="html"><![CDATA[Chatgpt Expanding World Of Work]]></title>
         <id>https://openai.com/index/chatgpt-expanding-world-of-work/</id>
         <link href="https://openai.com/index/chatgpt-expanding-world-of-work/"/>
         <updated>2026-10-26T18:36:43.208Z</updated>
+        <summary type="html"><![CDATA[Explore OpenAI Signals data on 165 work activities across nearly 100 countries, revealing how people use ChatGPT for work and how usage changes over time.]]></summary>
     </entry>
     <entry>
         <title type="html"><![CDATA[Building Scientific Understanding With Academic Communities]]></title>
         <id>https://openai.com/index/building-scientific-understanding-with-academic-communities/</id>
         <link href="https://openai.com/index/building-scientific-understanding-with-academic-communities/"/>
         <updated>2026-10-27T00:53:13.926Z</updated>
+        <summary type="html"><![CDATA[OpenAI shares model results on the Kakeya conjecture, Exponential Time Hypothesis, and quantum chromodynamics—and how researchers can verify and build on them.]]></summary>
     </entry>
     <entry>
         <title type="html"><![CDATA[Lifeval]]></title>
         <id>https://openai.com/index/lifeval/</id>
         <link href="https://openai.com/index/lifeval/"/>
         <updated>2026-11-02T18:24:54.890Z</updated>
+        <summary type="html"><![CDATA[Introducing LifeVal, a benchmark measuring how well AI helps people complete everyday tasks, from finding childcare to managing finances and government paperwork.]]></summary>
     </entry>
     <entry>
         <title type="html"><![CDATA[Accelerating Engineering For The Physical World]]></title>
         <id>https://openai.com/index/accelerating-engineering-for-the-physical-world/</id>
         <link href="https://openai.com/index/accelerating-engineering-for-the-physical-world/"/>
         <updated>2026-11-04T00:39:11.266Z</updated>
+        <summary type="html"><![CDATA[Discover how ChatGPT and Codex are helping engineers accelerate CAD, PCB design, simulation, and other workflows across the physical world.]]></summary>
     </entry>
     <entry>
         <title type="html"><![CDATA[Expanding Chatgpt For Academic Researchers]]></title>
         <id>https://openai.com/index/expanding-chatgpt-for-academic-researchers/</id>
         <link href="https://openai.com/index/expanding-chatgpt-for-academic-researchers/"/>
         <updated>2026-11-16T18:25:37.510Z</updated>
+        <summary type="html"><![CDATA[We’re expanding our ChatGPT for Academic Researchers program to offer 200,000 researchers worldwide free access to our frontier models.]]></summary>
     </entry>
     <entry>
         <title type="html"><![CDATA[Science At The Frontier]]></title>
         <id>https://openai.com/index/science-at-the-frontier/</id>
         <link href="https://openai.com/index/science-at-the-frontier/"/>
         <updated>2026-11-16T18:25:37.511Z</updated>
+        <summary type="html"><![CDATA[Explore how more than 1,800 scientists use ChatGPT in research. See findings on daily workflows, reported productivity, and expectations for discovery.]]></summary>
     </entry>
     <entry>
         <title type="html"><![CDATA[Advancing Chip Design With Our Models]]></title>
         <id>https://openai.com/index/advancing-chip-design-with-our-models/</id>
         <link href="https://openai.com/index/advancing-chip-design-with-our-models/"/>
         <updated>2026-11-18T18:25:00.935Z</updated>
+        <summary type="html"><![CDATA[OpenAI models optimized circuits used in Jalapeño silicon and improved RISC‑V core designs, showing progress in AI-assisted chip design with GPT‑6 Astra.]]></summary>
     </entry>
     <entry>
         <title type="html"><![CDATA[Research Acceleration Jagged Frontier]]></title>
         <id>https://openai.com/index/research-acceleration-jagged-frontier/</id>
         <link href="https://openai.com/index/research-acceleration-jagged-frontier/"/>
         <updated>2026-11-19T00:41:07.098Z</updated>
+        <summary type="html"><![CDATA[OpenAI measures how coding agents are accelerating AI research, where their performance remains uneven, and what this signals about recursive self-improvement.]]></summary>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[Can AI help scientists identify promising drug candidates?]]></title>
+        <id>https://openai.com/index/introducing-medchembench/</id>
+        <link href="https://openai.com/index/introducing-medchembench/"/>
+        <updated>2026-11-21T00:25:57.558Z</updated>
+        <summary type="html"><![CDATA[MedChemBench evaluates how well AI models interpret molecular structures, reason from experimental evidence, and select compounds in early drug discovery.]]></summary>
     </entry>
 </feed>
